@@ -3,30 +3,50 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    private float x, y, z;
-    private float anglex, angley, anglez;
+    float x, y, z;
+    float anglex, angley, anglez;
 
 
 	// Use this for initialization
 	void Start () {
 
-        this.transform.rotation = Quaternion.Euler(anglex, angley, anglez);
+        
         
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        angley = Input.GetAxis("Horizontal");
-        anglex = Input.GetAxis("Vertical");
+        HandleInput();
+
+        transform.rotation = Quaternion.Euler(0, angley, 0);
+
+    }
+    
+    void HandleInput()
+    {
+
+        angley -= Input.GetAxis("Horizontal");
+
+
 
         if (Input.GetKey(KeyCode.D))
         {
-            angley += .6f;
+            //angley += 60;
         }
+
         if (Input.GetKey(KeyCode.A))
         {
-            angley -= .6f;
+            //angley -= 6;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.position += transform.forward * 0.2f;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.position -= transform.forward * 0.2f;
         }
     }
 }
