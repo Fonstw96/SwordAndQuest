@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour
 {
      private GameObject goTarget;
+     private Rigidbody rb;
     public int id = 0;
     public int iLives = 2;
      protected float fDistance;
@@ -15,24 +16,32 @@ public class EnemyAI : MonoBehaviour
         if (goTarget == null)
             goTarget = GameObject.FindGameObjectWithTag("Player");
 
+        rb = GetComponent<Rigidbody>();
+
         fDistance = CalculateDistance(goTarget);
 	}
 	
 	void Update ()
     {
+	}
+
+    void FixedUpdate()
+    {
         fDistance = CalculateDistance(goTarget);
 
-        if (fDistance < 3)
+        if (fDistance < 2)
         {
             // attack
         }
         else if (fDistance < fPerceptionRange)
         {
             Vector3 direction = goTarget.transform.position - transform.position;
+            direction.y = 0;
             direction.Normalize();
+
             transform.position += direction * fSpeed * Time.deltaTime;
         }
-	}
+    }
 
     float CalculateDistance(GameObject Target)
     {
