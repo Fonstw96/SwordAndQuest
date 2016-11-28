@@ -12,8 +12,11 @@ public class EnemyAI : MonoBehaviour
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
      private bool bAttack = false;
+    public int iMinAttackMilliseconds = 100;
+    public int iMaxAttackMilliseconds = 250;
+     private int r = 0;
 
-     private Animator anim;
+    private Animator anim;
      private CharacterController controller;
     public float fSpeed = 6.0f;
     public float fRunSpeed = 1.7f;
@@ -26,7 +29,7 @@ public class EnemyAI : MonoBehaviour
             goTarget = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
         fLastAttack = 0;
-        fAttackDelay = Random.Range(0, 200) / 100.0f;
+        fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
         
         anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
@@ -38,27 +41,28 @@ public class EnemyAI : MonoBehaviour
     {
         fDistance = CalculateDistance(goTarget);
 
+        /* ====== ATTACK ====== */
         if (fDistance < fAttackRange)
         {
-            Debug.Log(anim.GetInteger("moving"));
-            if (anim.GetInteger("moving") == 2)
-            {
+            if (r != 0)
+                r = 0;
+            else
                 anim.SetInteger("moving", 0);
-                Debug.Log(anim.GetInteger("moving"));
-            }
 
             if (Time.time - fLastAttack > fAttackDelay)
             {
-                int r = Random.Range(1, 3);
+                r = Random.Range(1, 3);
                 if (r == 1)
                     anim.SetInteger("moving", 3);
                 else if (r == 2)
                     anim.SetInteger("moving", 4);
 
-                fAttackDelay = Random.Range(0, 200) / 100.0f;
+                fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
+                Debug.Log("next attack in " + fAttackDelay + " seconds.");
                 fLastAttack = Time.time;
             }
         }
+        /* ====== CHASE ====== */
         else if (fDistance < fPerceptionRange)
         {
             if (anim.GetInteger("battle") == 0)
@@ -78,8 +82,11 @@ public class EnemyAI : MonoBehaviour
 
             transform.position = new Vector3(transform.position.x - xspeed, 0, transform.position.z + zspeed);
         }
+        /* ====== IDLE ====== */
         else
         {
+            if (anim.GetInteger("moving") != 0)
+                anim.SetInteger("moving", 0);
             if (anim.GetInteger("battle") == 1)
                 anim.SetInteger("battle", 0);
         }
