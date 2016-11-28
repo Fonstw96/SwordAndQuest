@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour
 {
     public int id = 0;
+    public int iLives = 0;
      private GameObject goTarget;
      private Rigidbody rb;
      protected float fDistance = 0;
@@ -11,17 +12,13 @@ public class EnemyAI : MonoBehaviour
     public float fPerceptionRange = 15;
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
-     private bool bAttack = false;
     public int iMinAttackMilliseconds = 100;
     public int iMaxAttackMilliseconds = 250;
-     private int r = 0;
+     private int iRand = 0;
 
-    private Animator anim;
+     private Animator anim;
      private CharacterController controller;
-    public float fSpeed = 6.0f;
     public float fRunSpeed = 1.7f;
-    public float fTurnSpeed = 60.0f;
-    public float fGravity = 20.0f;
 
     void Start ()
     {
@@ -37,58 +34,69 @@ public class EnemyAI : MonoBehaviour
         fDistance = CalculateDistance(goTarget);
 	}
 
-    void FixedUpdate()
+    void Update()
     {
-        fDistance = CalculateDistance(goTarget);
-
-        /* ====== ATTACK ====== */
-        if (fDistance < fAttackRange)
+        /* ====== DIE ====== */
+        if (iLives < 0)
+            anim.SetInteger("moving", 0);
+        else if (iLives == 0)
         {
-            if (r != 0)
-                r = 0;
-            else
-                anim.SetInteger("moving", 0);
+            iRand = Random.Range(1, 3);
+            anim.SetInteger("battle", 0);
+            anim.SetInteger("moving", 11 + iRand);
 
-            if (Time.time - fLastAttack > fAttackDelay)
-            {
-                r = Random.Range(1, 3);
-                if (r == 1)
-                    anim.SetInteger("moving", 3);
-                else if (r == 2)
-                    anim.SetInteger("moving", 4);
-
-                fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
-                Debug.Log("next attack in " + fAttackDelay + " seconds.");
-                fLastAttack = Time.time;
-            }
+            iLives = -1;
         }
-        /* ====== CHASE ====== */
-        else if (fDistance < fPerceptionRange)
-        {
-            if (anim.GetInteger("battle") == 0)
-                anim.SetInteger("battle", 1);
-            if (anim.GetInteger("moving") > 2)
-                anim.SetInteger("moving", 0);
-            else if (anim.GetInteger("moving") == 0)
-                anim.SetInteger("moving", 2);
-
-            fRunSpeed = 0.13f;
-
-            float angle = Mathf.Atan2(-(goTarget.transform.position.x - transform.position.x), goTarget.transform.position.z - transform.position.z);
-            float xspeed = Mathf.Sin(angle) * fRunSpeed;
-            float zspeed = Mathf.Cos(angle) * fRunSpeed;
-
-            transform.rotation = Quaternion.Euler(0, -angle * 180 / Mathf.PI, 0);
-
-            transform.position = new Vector3(transform.position.x - xspeed, 0, transform.position.z + zspeed);
-        }
-        /* ====== IDLE ====== */
+        /* ====== LIVE ====== */
         else
         {
-            if (anim.GetInteger("moving") != 0)
-                anim.SetInteger("moving", 0);
-            if (anim.GetInteger("battle") == 1)
-                anim.SetInteger("battle", 0);
+            fDistance = CalculateDistance(goTarget);
+
+            /* ====== ATTACK ====== */
+            if (fDistance < fAttackRange)
+            {
+                if (iRand != 0)
+                    iRand = 0;
+                else
+                    anim.SetInteger("moving", 0);
+
+                if (Time.time - fLastAttack > fAttackDelay)
+                {
+                    iRand = Random.Range(1, 3);
+                    anim.SetInteger("moving", 2 + iRand);
+
+                    fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
+                    fLastAttack = Time.time;
+                }
+            }
+            /* ====== CHASE ====== */
+            else if (fDistance < fPerceptionRange)
+            {
+                if (anim.GetInteger("battle") == 0)
+                    anim.SetInteger("battle", 1);
+                if (anim.GetInteger("moving") > 2)
+                    anim.SetInteger("moving", 0);
+                else if (anim.GetInteger("moving") == 0)
+                    anim.SetInteger("moving", 2);
+
+                fRunSpeed = 0.13f;
+
+                float angle = Mathf.Atan2(-(goTarget.transform.position.x - transform.position.x), goTarget.transform.position.z - transform.position.z);
+                float xspeed = Mathf.Sin(angle) * fRunSpeed;
+                float zspeed = Mathf.Cos(angle) * fRunSpeed;
+
+                transform.rotation = Quaternion.Euler(0, -angle * 180 / Mathf.PI, 0);
+
+                transform.position = new Vector3(transform.position.x - xspeed, 0, transform.position.z + zspeed);
+            }
+            /* ====== IDLE ====== */
+            else
+            {
+                if (anim.GetInteger("moving") != 0)
+                    anim.SetInteger("moving", 0);
+                if (anim.GetInteger("battle") == 1)
+                    anim.SetInteger("battle", 0);
+            }
         }
     }
 
