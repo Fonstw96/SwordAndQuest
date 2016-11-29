@@ -6,7 +6,6 @@ public class EnemyAI : MonoBehaviour
     public int id = 0;
     public int iLives = 0;
      private GameObject goTarget;
-     private Rigidbody rb;
      protected float fDistance = 0;
     public float fAttackRange = 2;
     public float fPerceptionRange = 15;
@@ -17,19 +16,18 @@ public class EnemyAI : MonoBehaviour
      private int iRand = 0;
 
      private Animator anim;
-     private CharacterController controller;
-    public float fRunSpeed = 1.7f;
+    public float fRunSpeed = 0.45f;
 
     void Start ()
     {
         if (goTarget == null)
             goTarget = GameObject.FindGameObjectWithTag("Player");
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         fLastAttack = 0;
         fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
         
         anim = GetComponent<Animator>();
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
 
         fDistance = CalculateDistance(goTarget);
 	}
@@ -79,15 +77,13 @@ public class EnemyAI : MonoBehaviour
                 else if (anim.GetInteger("moving") == 0)
                     anim.SetInteger("moving", 2);
 
-                fRunSpeed = 0.13f;
-
                 float angle = Mathf.Atan2(-(goTarget.transform.position.x - transform.position.x), goTarget.transform.position.z - transform.position.z);
                 float xspeed = Mathf.Sin(angle) * fRunSpeed;
                 float zspeed = Mathf.Cos(angle) * fRunSpeed;
 
                 transform.rotation = Quaternion.Euler(0, -angle * 180 / Mathf.PI, 0);
 
-                transform.position = new Vector3(transform.position.x - xspeed, 0, transform.position.z + zspeed);
+                transform.position += new Vector3(-xspeed, 0, zspeed);
             }
             /* ====== IDLE ====== */
             else

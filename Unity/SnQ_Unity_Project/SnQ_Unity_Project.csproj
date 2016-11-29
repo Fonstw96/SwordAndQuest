@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\PlayerWalk.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game Objects\Goblin_rouge\readme.txt" />
