@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Gebruiker/Desktop/SwordAndQuest-master/Unity/SnQ_Unity_Project/Assets/Scenes/playertest.unity
+- path: Assets/Scenes/enemy_test.unity
   isLoaded: 1
   isActive: 1
