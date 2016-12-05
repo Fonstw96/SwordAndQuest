@@ -20,9 +20,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start ()
     {
-        if (goTarget == null)
-            goTarget = GameObject.FindGameObjectWithTag("Player");
-        //rb = GetComponent<Rigidbody>();
+        goTarget = GameObject.FindGameObjectWithTag("Player");
+
         fLastAttack = 0;
         fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
         
@@ -32,11 +31,18 @@ public class EnemyAI : MonoBehaviour
         fDistance = CalculateDistance(goTarget);
 	}
 
+    void FixedUpdate()
+    {
+    }
+
     void Update()
     {
         /* ====== DIE ====== */
         if (iLives < 0)
-            anim.SetInteger("moving", 0);
+        {
+            if (anim.GetInteger("moving") > 0/* && anim.GetInteger("moving") < 12*/)
+                anim.SetInteger("moving", 0);
+        }
         else if (iLives == 0)
         {
             iRand = Random.Range(1, 3);
@@ -45,7 +51,7 @@ public class EnemyAI : MonoBehaviour
 
             iLives = -1;
         }
-        /* ====== LIVE ====== */
+        /* ====== LIFE ====== */
         else
         {
             fDistance = CalculateDistance(goTarget);
@@ -62,6 +68,9 @@ public class EnemyAI : MonoBehaviour
                 {
                     iRand = Random.Range(1, 3);
                     anim.SetInteger("moving", 2 + iRand);
+
+                    goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
+                    // goTarget.lives--;
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
@@ -96,7 +105,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    float CalculateDistance(GameObject Target)
+    private float CalculateDistance(GameObject Target)
     {
         float x_dist = this.transform.position.x - goTarget.transform.position.x;
         x_dist *= x_dist;
@@ -106,5 +115,19 @@ public class EnemyAI : MonoBehaviour
         z_dist *= z_dist;
         
         return Mathf.Sqrt(x_dist + y_dist + z_dist);
+    }
+
+    private void LifeLoss()
+    {
+        if (iLives > 0)
+        {
+            iLives--;
+
+            if (iLives > 0)
+            {
+                iRand = Random.Range(1, 3);
+                anim.SetInteger("moving", 9 + iRand);
+            }
+        }
     }
 }
