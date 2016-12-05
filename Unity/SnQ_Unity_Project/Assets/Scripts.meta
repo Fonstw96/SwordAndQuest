@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 06f1dd745c01b64448f3dbefff2b2f38
 folderAsset: yes
 timeCreated: 1479901726
+=======
+guid: d1a3a88c29eccd64a91fa42dee08bce4
+folderAsset: yes
+timeCreated: 1479897835
+>>>>>>> Fons
 licenseType: Free
 DefaultImporter:
   userData: 

@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/playertest.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> Fons
   isLoaded: 1
   isActive: 1
