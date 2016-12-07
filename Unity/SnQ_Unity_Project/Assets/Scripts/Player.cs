@@ -51,9 +51,15 @@ public class Player : MonoBehaviour
         // handle speed and animations
         if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
         {
-            speed = fSpeed * 1.333333f;
+            speed = fSpeed * 1.5f;
             //run = true;
             //walk = false;
+        }
+        else if (InputV < 0)
+        {
+            speed = fSpeed * 0.75f;
+            //run = false;
+            //walk = true;
         }
         else
         {
@@ -63,19 +69,14 @@ public class Player : MonoBehaviour
         }
 
         // forward/backward
-        if (InputV > 0)   // W / Up / Left_Analog_Stick_Up
-            transform.position += transform.forward * speed * InputV;
-        else if (InputV < 0)   // S / Down / Left_Analog_Stick_Down
-            transform.position -= transform.forward * speed * 0.75f * -InputV;
+        transform.Translate(0, 0, speed * InputV);
 
         // left/right
-        if (InputH > 0)
-            angle += 4 * InputH;
-        else if (InputH < 0)
-            angle -= 4 * -InputH;
+        angle = 4 * InputH;
+        transform.Rotate(0, angle, 0);
 
 
-        transform.rotation = Quaternion.Euler(0, angle, 0);
+
         //anim.SetBool("Walk", walk);
         //anim.SetBool("Run", run);
     }
