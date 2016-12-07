@@ -79,13 +79,21 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\WeaponPickUp.cs" />
   </ItemGroup>
 =======
+=======
+    <Compile Include="Assets\Scripts\DialogueHolder.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
+>>>>>>> Fons
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\ExitGame.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\QuestObject.cs" />
+    <Compile Include="Assets\Scripts\QuestTrigger.cs" />
     <Compile Include="Assets\Scripts\SelectonInput.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
