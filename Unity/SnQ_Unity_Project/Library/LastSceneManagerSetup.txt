@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/Scenes/playertest.unity
-=======
-- path: Assets/Scenes/MainMenu.unity
->>>>>>> Fons
-=======
 - path: Assets/Scenes/Overworld_Fons.unity
->>>>>>> Fons
   isLoaded: 1
   isActive: 1

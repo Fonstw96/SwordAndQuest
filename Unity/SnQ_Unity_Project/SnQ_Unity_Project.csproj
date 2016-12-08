@@ -78,16 +78,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\WeaponPickUp.cs" />
-  </ItemGroup>
-=======
-=======
     <Compile Include="Assets\Scripts\DialogueHolder.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
->>>>>>> Fons
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\ExitGame.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -102,7 +94,6 @@
   <ItemGroup>
     <None Include="Assets\Game Objects\Goblin_rouge\readme.txt" />
   </ItemGroup>
->>>>>>> Fons
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

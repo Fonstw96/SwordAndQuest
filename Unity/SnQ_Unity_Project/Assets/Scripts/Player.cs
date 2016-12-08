@@ -1,123 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-<<<<<<< HEAD
-public class Player : MonoBehaviour {
-
-    Animator anim;
-
-    float x, y, z;
-    float anglex, angley, anglez;
-
-    public int levens = 10;
-
-    string area = "safe";
-
-    bool walk;
-    bool run;
-
-
-    // Use this for initialization
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        HandleInput();
-
-        transform.rotation = Quaternion.Euler(0, angley, 0);
-        anim.SetBool("Walk", walk);
-        anim.SetBool("Run", run);
-    }
-
-    void HandleInput()
-    {
-
-        // levens
-        if (levens == 0)
-        {
-            anim.SetTrigger("Die");
-        }
-        // running animations
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
-        {
-            transform.position += transform.forward * 0.04f;
-            run = true;
-            walk = false;
-        }
-
-        // walking animations
-        else if (Input.GetKey(KeyCode.D))
-        {
-
-            if (Input.GetKey(KeyCode.W))
-            {
-                angley += 4;
-
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                angley += 4;
-                transform.position -= transform.forward * 0.02f;
-            }
-            else
-            {
-                transform.position += transform.forward * 0.005f;
-                angley += 8;
-            }
-        }
-
-        else if (Input.GetKey(KeyCode.A))
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                angley -= 4;
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                angley -= 4;
-                transform.position -= transform.forward * 0.02f;
-            }
-            else
-            {
-                transform.position += transform.forward * 0.005f;
-                angley -= 8;
-            }
-        }
-
-        else if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += transform.forward * 0.02f;
-            walk = true;
-            run = false;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            transform.position -= transform.forward * 0.02f;
-            walk = true;
-            run = false;
-        }
-        
-        else
-        {
-            walk = false;
-            run = false;
-        }
-
-        }
-    
-=======
 public class Player : MonoBehaviour
 {
     private GameObject goEnemy;
     private Collider cEnemy;
 
-    //private Animator anim;
+    Animator anim;
     
     protected float angle;
 
@@ -125,8 +14,8 @@ public class Player : MonoBehaviour
      public float fSpeed = 0.45f;
     private float speed;
 
-    //bool walk;
-    //bool run;
+    bool walk;
+    bool run;
     protected bool bDead = false;
 
     protected bool bDefend = false;
@@ -139,6 +28,7 @@ public class Player : MonoBehaviour
         //anim = GetComponent<Animator>();
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         cEnemy = goEnemy.GetComponent<Collider>();
+        anim = GetComponent<Animator>();
     }
     
     void Update()
@@ -150,7 +40,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Destroy(GameObject.FindGameObjectWithTag("PlayerModel"));
+            anim.SetTrigger("Die");
         }
     }
 
@@ -163,20 +53,26 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
         {
             speed = fSpeed * 1.5f;
-            //run = true;
-            //walk = false;
+            run = true;
+            walk = false;
+        }
+        else if (InputV > 0)
+        {
+            speed = fSpeed * 0.75f;
+            run = false;
+            walk = true;
         }
         else if (InputV < 0)
         {
             speed = fSpeed * 0.75f;
-            //run = false;
-            //walk = true;
+            run = false;
+            walk = true;
         }
         else
         {
             speed = fSpeed;
-            //run = false;
-            //walk = true;
+            run = false;
+            walk = false;
         }
 
         // forward/backward
@@ -188,8 +84,8 @@ public class Player : MonoBehaviour
 
 
 
-        //anim.SetBool("Walk", walk);
-        //anim.SetBool("Run", run);
+        anim.SetBool("Walk", walk);
+        anim.SetBool("Run", run);
     }
 
     private void HandleCombat()
@@ -242,5 +138,4 @@ public class Player : MonoBehaviour
 
         // hit anim?
     }
->>>>>>> Fons
 }
