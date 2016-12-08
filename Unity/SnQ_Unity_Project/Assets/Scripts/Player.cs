@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     private GameObject goEnemy;
     private Collider cEnemy;
 
-    Animator anim;
+    private Animator anim;
     
     protected float angle;
 
@@ -25,10 +25,10 @@ public class Player : MonoBehaviour
     
     void Start()
     {
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         cEnemy = goEnemy.GetComponent<Collider>();
-        anim = GetComponent<Animator>();
+
     }
     
     void Update()
