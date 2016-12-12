@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            anim.SetTrigger("Die");
+            anim.SetInteger("Animation", 99);
         }
     }
 
