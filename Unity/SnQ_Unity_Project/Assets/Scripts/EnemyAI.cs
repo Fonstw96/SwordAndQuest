@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour
 {
     public int id = 0;
-    public int iLives = 0;
+    public int iLives = 2;
      private GameObject goTarget;
      protected float fDistance = 0;
     public float fAttackRange = 2;
@@ -40,14 +40,14 @@ public class EnemyAI : MonoBehaviour
         /* ====== DIE ====== */
         if (iLives < 0)
         {
-            if (anim.GetInteger("moving") > 0/* && anim.GetInteger("moving") < 12*/)
-                anim.SetInteger("moving", 0);
+            //if (anim.GetInteger("moving") > 0/* && anim.GetInteger("moving") < 12*/)
+            //    anim.SetInteger("moving", 0);
         }
         else if (iLives == 0)
         {
             iRand = Random.Range(1, 3);
-            anim.SetInteger("battle", 0);
-            anim.SetInteger("moving", 11 + iRand);
+            //anim.SetInteger("battle", 0);
+            //anim.SetInteger("moving", 11 + iRand);
 
             iLives = -1;
         }
@@ -61,16 +61,15 @@ public class EnemyAI : MonoBehaviour
             {
                 if (iRand != 0)
                     iRand = 0;
-                else
-                    anim.SetInteger("moving", 0);
+                //else
+                //    anim.SetInteger("moving", 0);
 
                 if (Time.time - fLastAttack > fAttackDelay)
                 {
                     iRand = Random.Range(1, 3);
-                    anim.SetInteger("moving", 2 + iRand);
+                    //anim.SetInteger("moving", 2 + iRand);
 
                     goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
-                    // goTarget.lives--;
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
@@ -79,12 +78,12 @@ public class EnemyAI : MonoBehaviour
             /* ====== CHASE ====== */
             else if (fDistance < fPerceptionRange)
             {
-                if (anim.GetInteger("battle") == 0)
-                    anim.SetInteger("battle", 1);
-                if (anim.GetInteger("moving") > 2)
-                    anim.SetInteger("moving", 0);
-                else if (anim.GetInteger("moving") == 0)
-                    anim.SetInteger("moving", 2);
+                //if (anim.GetInteger("battle") == 0)
+                //    anim.SetInteger("battle", 1);
+                //if (anim.GetInteger("moving") > 2)
+                //    anim.SetInteger("moving", 0);
+                //else if (anim.GetInteger("moving") == 0)
+                //    anim.SetInteger("moving", 2);
 
                 float angle = Mathf.Atan2(-(goTarget.transform.position.x - transform.position.x), goTarget.transform.position.z - transform.position.z);
                 float xspeed = Mathf.Sin(angle) * fRunSpeed;
@@ -97,10 +96,10 @@ public class EnemyAI : MonoBehaviour
             /* ====== IDLE ====== */
             else
             {
-                if (anim.GetInteger("moving") != 0)
-                    anim.SetInteger("moving", 0);
-                if (anim.GetInteger("battle") == 1)
-                    anim.SetInteger("battle", 0);
+                //if (anim.GetInteger("moving") != 0)
+                //    anim.SetInteger("moving", 0);
+                //if (anim.GetInteger("battle") == 1)
+                //    anim.SetInteger("battle", 0);
             }
         }
     }
@@ -126,7 +125,7 @@ public class EnemyAI : MonoBehaviour
             if (iLives > 0)
             {
                 iRand = Random.Range(1, 3);
-                anim.SetInteger("moving", 9 + iRand);
+                //anim.SetInteger("moving", 9 + iRand);
             }
         }
     }

@@ -3,25 +3,25 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    private GameObject goEnemy;
-    private Collider cEnemy;
+     private GameObject goEnemy;
+     private Collider cEnemy;
 
-    Animator anim;
+     protected Animator anim;
     
-    protected float angle;
+     protected float angle;
 
-     public int levens = 10;
-     public float fSpeed = 0.45f;
-    private float speed;
+    public int levens = 5;
+     private float fLastRegen = 0;
+    public float fRegenDelay = 3;
 
-    bool walk;
-    bool run;
-    protected bool bDead = false;
-
-    protected bool bDefend = false;
-    protected bool bAttack = false;
-    protected float fDistance = 0;
-     public float fAttackRange = 2;
+    public float fSpeed = 0.45f;
+     private float speed;
+    
+     protected bool bDead = false;
+    
+     protected bool bAttack = false;
+     protected float fDistance = 0;
+    public float fAttackRange = 2;
     
     void Start()
     {
@@ -39,40 +39,39 @@ public class Player : MonoBehaviour
             HandleCombat();
         }
         else
-        {
             anim.SetInteger("Animation", 99);
-        }
     }
 
     void HandleMovement()
     {
         float InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
         float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
+        bAttack = Input.GetMouseButton(0);
 
         // handle speed and animations
         if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
         {
             speed = fSpeed * 1.5f;
-            run = true;
-            walk = false;
+
+            anim.SetInteger("Animation", 2);
         }
         else if (InputV > 0)
         {
-            speed = fSpeed * 0.75f;
-            run = false;
-            walk = true;
+            speed = fSpeed;
+
+            anim.SetInteger("Animation", 1);
         }
         else if (InputV < 0)
         {
             speed = fSpeed * 0.75f;
-            run = false;
-            walk = true;
+
+            anim.SetInteger("Animation", 1);
         }
-        else
+        else if (!bAttack)
         {
             speed = fSpeed;
-            run = false;
-            walk = false;
+            
+            anim.SetInteger("Animation", 0);
         }
 
         // forward/backward
@@ -81,11 +80,6 @@ public class Player : MonoBehaviour
         // left/right
         angle = 4 * InputH;
         transform.Rotate(0, angle, 0);
-
-
-
-        anim.SetBool("Walk", walk);
-        anim.SetBool("Run", run);
     }
 
     private void HandleCombat()
@@ -94,28 +88,22 @@ public class Player : MonoBehaviour
             bDead = true;
         else
         {
-            bool LMB = Input.GetMouseButtonDown(0);
-            bool RMB = Input.GetMouseButtonDown(1);
-
-            if (RMB)
+            if (bAttack)
             {
-                bDefend = true;
+                anim.SetInteger("Animation", 3 + Random.Range(0, 2));   // 3..4
+
+                fDistance = CalculateDistance(goEnemy);
+                if (fDistance < fAttackRange)
+                    cEnemy.SendMessage("LifeLoss");
+
                 bAttack = false;
             }
-            else if (LMB)
+
+            if (levens < 5 && Time.time - fLastRegen > fRegenDelay)
             {
-                bDefend = false;
-                bAttack = true;
+                fLastRegen = Time.time;
+                levens++;
             }
-        }
-
-        if (bAttack)
-        {
-            fDistance = CalculateDistance(goEnemy);
-            if (fDistance < fAttackRange)
-                cEnemy.SendMessage("LifeLoss");
-
-            bAttack = false;
         }
     }
 
@@ -133,9 +121,9 @@ public class Player : MonoBehaviour
 
     private void LifeLoss()
     {
-        if (!bDefend)
-            levens--;
+        anim.SetInteger("Animation", 5);
+        levens--;
 
-        // hit anim?
+        fLastRegen = Time.time;
     }
 }
