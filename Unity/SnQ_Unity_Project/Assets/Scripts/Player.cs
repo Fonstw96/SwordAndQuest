@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         cEnemy = goEnemy.GetComponent<Collider>();
         anim = GetComponent<Animator>();
 
-        iInventory = new int[9];
+        iInventory = new int[UIController.imInventory.Length];
     }
     
     void Update()

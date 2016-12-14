@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
     private GameObject goLives;
     private GameObject goPlayer;
     private Player scrPlayer;
-    private Image[] imInventory;
+    public Image[] imInventory;
     public Sprite[] t2ItemIcons;
 
 	void Start ()
@@ -28,12 +28,15 @@ public class UIController : MonoBehaviour
         goLives.GetComponent<RectTransform>().sizeDelta = new Vector2(NewWidth, 80);
 
         // Inventory
-        for (int i=0; i<9; i++)
+        for (int i=0; i<imInventory.Length - 1; i++)
         {
             if (scrPlayer.iInventory[i] > 0)
             {
-                imInventory[i + 1].sprite = t2ItemIcons[scrPlayer.iInventory[i] - 1];
-                imInventory[i + 1].color = new Color(1, 1, 1, 1);
+            	if (t2ItemIcons.Length >= scrPlayer.iInventory[i] - 1)
+            	{
+	                imInventory[i + 1].sprite = t2ItemIcons[scrPlayer.iInventory[i] - 1];
+                	imInventory[i + 1].color = new Color(1, 1, 1, 1);
+                }
             }
             else if (imInventory[i + 1].color.a > 0)
                 imInventory[i + 1].color = new Color(0, 0, 0, 0);
