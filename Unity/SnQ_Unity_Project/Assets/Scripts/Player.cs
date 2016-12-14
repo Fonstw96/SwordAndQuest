@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
      protected bool bAttack = false;
      protected float fDistance = 0;
     public float fAttackRange = 2;
+
+     public int[] iInventory;
     
     void Start()
     {
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         cEnemy = goEnemy.GetComponent<Collider>();
         anim = GetComponent<Animator>();
+
+        iInventory = new int[9];
     }
     
     void Update()
