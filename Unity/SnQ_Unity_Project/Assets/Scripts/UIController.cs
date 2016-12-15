@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    private GameObject goLives;
-    private GameObject goPlayer;
-    private Player scrPlayer;
-    public Image[] imInventory;
+     private GameObject goLives;
+     private GameObject goPlayer;
+     private Player scrPlayer;
+    static public Image[] imInventory;
     public Sprite[] t2ItemIcons;
 
 	void Start ()

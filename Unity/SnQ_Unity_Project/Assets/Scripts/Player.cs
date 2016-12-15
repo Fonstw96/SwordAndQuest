@@ -32,7 +32,16 @@ public class Player : MonoBehaviour
         cEnemy = goEnemy.GetComponent<Collider>();
         anim = GetComponent<Animator>();
 
-        iInventory = new int[UIController.imInventory.Length];
+        if (UIController.imInventory != null)
+        {
+            iInventory = new int[UIController.imInventory.Length - 1];
+            Debug.Log("Player's inventory size is " + iInventory.Length);
+        }
+        else
+        {
+            iInventory = new int[1];
+            Debug.Log("No inventory set, player's inventory size is 1");
+        }
     }
     
     void Update()
