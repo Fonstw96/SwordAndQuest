@@ -190,9 +190,9 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: adventurerPelvis
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -1423,6 +1423,10 @@ ModelImporter:
         weight: 1
       - path: adventurerPelvis/adventurerSpine1/adventurerSpine2/adventurerSpine3/adventurerSpine4/adventurerRibcage/adventurerRCollarbone/adventurerRUpperarm/adventurerRForearm/adventurerRPalm/adventurerRDigit51/adventurerRDigit52/adventurerRDigit53
         weight: 1
+      - path: adventurerPelvis/adventurerSpine1/adventurerSpine2/adventurerSpine3/adventurerSpine4/adventurerRibcage/adventurerRCollarbone/adventurerRUpperarm/adventurerRForearm/adventurerRPalm/Sword_LOD1
+        weight: 1
+      - path: Hero_LOD1
+        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
@@ -1636,7 +1640,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Hero_LOD1
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2

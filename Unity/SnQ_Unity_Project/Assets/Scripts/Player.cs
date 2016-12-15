@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
     
     protected float angle;
 
-     public int levens = 10;
+    public int levens = 10;
+    private int attack;
+
      public float fSpeed = 0.45f;
     private float speed;
 
@@ -106,6 +108,16 @@ public class Player : MonoBehaviour
             {
                 bDefend = false;
                 bAttack = true;
+                if (attack == 3)
+                {
+                    anim.SetTrigger("Attack 2");
+                    attack = 0;
+                }
+                else
+                {
+                    anim.SetTrigger("Attack1");
+                    attack++;
+                }
             }
         }
 
@@ -136,6 +148,6 @@ public class Player : MonoBehaviour
         if (!bDefend)
             levens--;
 
-        // hit anim?
+        anim.SetTrigger("Hit");
     }
 }
