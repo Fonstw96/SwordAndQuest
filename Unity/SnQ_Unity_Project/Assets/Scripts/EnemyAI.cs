@@ -20,6 +20,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start ()
     {
+        transform.Rotate(0, Random.Range(0, 360), 0);
+
         goTarget = GameObject.FindGameObjectWithTag("Player");
 
         fLastAttack = 0;
@@ -30,10 +32,6 @@ public class EnemyAI : MonoBehaviour
 
         fDistance = CalculateDistance(goTarget);
 	}
-
-    void FixedUpdate()
-    {
-    }
 
     void Update()
     {
@@ -127,6 +125,14 @@ public class EnemyAI : MonoBehaviour
                 iRand = Random.Range(1, 3);
                 //anim.SetInteger("moving", 9 + iRand);
             }
+            else
+                Debug.Log("Enemy " + id + " died.");
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().bAttack && Vector3.Angle(other.transform.forward, transform.position - other.transform.position) < 15)
+            LifeLoss();
     }
 }

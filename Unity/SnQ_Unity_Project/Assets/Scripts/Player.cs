@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
-     private GameObject goEnemy;
-     private Collider cEnemy;
-
      protected Animator anim;
     
      protected float angle;
@@ -19,17 +18,26 @@ public class Player : MonoBehaviour
     
      protected bool bDead = false;
     
-     protected bool bAttack = false;
-     protected float fDistance = 0;
-    public float fAttackRange = 2;
+    public bool bAttack = false;
 
      public int[] iInventory;
-    
+
+    protected struct Target
+    {
+        public void Set(int id, float dis)
+        {
+            ID = id;
+            fDistance = dis;
+        }
+
+        public int ID;
+        public float fDistance;
+    }
+
     void Start()
     {
         //anim = GetComponent<Animator>();
-        goEnemy = GameObject.FindGameObjectWithTag("Enemy");
-        cEnemy = goEnemy.GetComponent<Collider>();
+
         anim = GetComponent<Animator>();
 
         if (UIController.imInventory != null)
@@ -42,6 +50,7 @@ public class Player : MonoBehaviour
             iInventory = new int[1];
             Debug.Log("No inventory set, player's inventory size is 1");
         }
+
     }
     
     void Update()
@@ -59,7 +68,6 @@ public class Player : MonoBehaviour
     {
         float InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
         float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
-        bAttack = Input.GetMouseButton(0);
 
         // handle speed and animations
         if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
@@ -97,36 +105,29 @@ public class Player : MonoBehaviour
 
     private void HandleCombat()
     {
-        if (levens <= 0)
-            bDead = true;
+        if (Input.GetMouseButtonDown(0))
+            bAttack = true;
         else
+            bAttack = false;
+
+
+        if (bAttack)
+            anim.SetInteger("Animation", 3 + Random.Range(0, 2));   // 3..4
+
+        if (levens < 5 && Time.time - fLastRegen > fRegenDelay)
         {
-            if (bAttack)
-            {
-                anim.SetInteger("Animation", 3 + Random.Range(0, 2));   // 3..4
-
-                fDistance = CalculateDistance(goEnemy);
-                if (fDistance < fAttackRange)
-                    cEnemy.SendMessage("LifeLoss");
-
-                bAttack = false;
-            }
-
-            if (levens < 5 && Time.time - fLastRegen > fRegenDelay)
-            {
-                fLastRegen = Time.time;
-                levens++;
-            }
+            fLastRegen = Time.time;
+            levens++;
         }
     }
 
-    private float CalculateDistance(GameObject Target)
+    private float CalculateDistance(GameObject DistanceTo)
     {
-        float x_dist = this.transform.position.x - goEnemy.transform.position.x;
+        float x_dist = this.transform.position.x - DistanceTo.transform.position.x;
         x_dist *= x_dist;
-        float y_dist = this.transform.position.y - goEnemy.transform.position.y;
+        float y_dist = this.transform.position.y - DistanceTo.transform.position.y;
         y_dist *= y_dist;
-        float z_dist = this.transform.position.z - goEnemy.transform.position.z;
+        float z_dist = this.transform.position.z - DistanceTo.transform.position.z;
         z_dist *= z_dist;
 
         return Mathf.Sqrt(x_dist + y_dist + z_dist);
@@ -136,6 +137,8 @@ public class Player : MonoBehaviour
     {
         anim.SetInteger("Animation", 5);
         levens--;
+        if (levens <= 0)
+            bDead = true;
 
         fLastRegen = Time.time;
     }
