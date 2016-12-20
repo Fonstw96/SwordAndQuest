@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Linq;
-using System.Collections.Generic;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class Player : MonoBehaviour
      protected float angle;
 
     public int levens = 5;
+     private int iInitialLives = 0;
      private float fLastRegen = 0;
     public float fRegenDelay = 3;
 
@@ -51,6 +50,7 @@ public class Player : MonoBehaviour
             Debug.Log("No inventory set, player's inventory size is 1");
         }
 
+        iInitialLives = levens;
     }
     
     void Update()
@@ -112,12 +112,22 @@ public class Player : MonoBehaviour
 
 
         if (bAttack)
-            anim.SetInteger("Animation", 3 + Random.Range(0, 2));   // 3..4
+            anim.SetInteger("Animation", 3 + UnityEngine.Random.Range(0, 2));   // 3..4
 
-        if (levens < 5 && Time.time - fLastRegen > fRegenDelay)
+        if (levens < iInitialLives && Time.time - fLastRegen > fRegenDelay)
         {
             fLastRegen = Time.time;
             levens++;
+        }
+        else if (Input.GetKeyDown("1") && levens < iInitialLives)
+        {
+            int index = Array.IndexOf(iInventory, 1);
+
+            if (index > -1)
+            {
+                iInventory[index] = 0;
+                levens = iInitialLives;
+            }
         }
     }
 

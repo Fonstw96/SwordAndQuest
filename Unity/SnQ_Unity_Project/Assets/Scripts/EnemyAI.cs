@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     public float fPerceptionRange = 15;
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
+     private int iAttackSequence = -1;
     public int iMinAttackMilliseconds = 100;
     public int iMaxAttackMilliseconds = 250;
      private int iRand = 0;
@@ -36,42 +37,37 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         /* ====== DIE ====== */
-        if (iLives < 0)
+        if (iLives <= 0 && anim.GetInteger("anim") != 99)
         {
-            //if (anim.GetInteger("moving") > 0/* && anim.GetInteger("moving") < 12*/)
-            //    anim.SetInteger("moving", 0);
-        }
-        else if (iLives == 0)
-        {
-            iRand = Random.Range(1, 3);
-            //anim.SetInteger("battle", 0);
-            //anim.SetInteger("moving", 11 + iRand);
-
-            iLives = -1;
+            anim.SetInteger("anim", 99);
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<Collider>());
         }
         /* ====== LIFE ====== */
-        else
+        else if (iLives > 0)
         {
             fDistance = CalculateDistance(goTarget);
 
             /* ====== ATTACK ====== */
             if (fDistance < fAttackRange)
             {
-                if (iRand != 0)
-                    iRand = 0;
-                //else
-                //    anim.SetInteger("moving", 0);
-
                 if (Time.time - fLastAttack > fAttackDelay)
                 {
-                    iRand = Random.Range(1, 3);
-                    //anim.SetInteger("moving", 2 + iRand);
+                    iAttackSequence++;
+                    if (iAttackSequence == 1)
+                        anim.SetInteger("anim", 4);
+                    else
+                        anim.SetInteger("anim", 3);
+                    if (iAttackSequence >= 2)
+                        iAttackSequence = -1;
 
                     goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
                 }
+                //else if (anim.GetInteger("anim") != 0)
+                //    anim.SetInteger("anim", 0);
             }
             /* ====== CHASE ====== */
             else if (fDistance < fPerceptionRange)
