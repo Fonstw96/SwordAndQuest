@@ -24,8 +24,8 @@ public class UIController : MonoBehaviour
 	void Update ()
     {
         // Lives
-        int NewWidth = scrPlayer.levens * 80;
-        goLives.GetComponent<RectTransform>().sizeDelta = new Vector2(NewWidth, 80);
+        int NewWidth = /*(int)Mathf.Floor*/(scrPlayer.levens * 256);
+        goLives.GetComponent<RectTransform>().sizeDelta = new Vector2(NewWidth, 256);
 
         // Inventory
         for (int i=0; i<imInventory.Length - 1; i++)

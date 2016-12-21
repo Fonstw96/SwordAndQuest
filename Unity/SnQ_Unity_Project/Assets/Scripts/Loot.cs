@@ -13,6 +13,7 @@ public class Loot : MonoBehaviour
 
             if (index > -1)
             {
+                Debug.Log("You found a Health Potion!");
                 other.GetComponent<Player>().iInventory[index] = iItem;
                 iItem = 0;
             }

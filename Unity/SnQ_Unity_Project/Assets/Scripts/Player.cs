@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
             fLastRegen = Time.time;
             levens++;
         }
-        else if (Input.GetKeyDown("1") && levens < iInitialLives)
+        else if (Input.GetKeyDown(KeyCode.F) && levens < iInitialLives)
         {
             int index = Array.IndexOf(iInventory, 1);
 
