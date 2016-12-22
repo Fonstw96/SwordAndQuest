@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Teleport : MonoBehaviour
 {
+    public string scene;
 	void Start ()
     {
 	
@@ -16,7 +17,7 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-            SceneManager.LoadScene("Temple");
+        if (other.gameObject.tag == "Player" && scene != null)
+            SceneManager.LoadScene(scene);
     }
 }

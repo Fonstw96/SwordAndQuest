@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
         if (inAir == true)
         {
             if(falldelay == 0)
-            GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
+            //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
             Debug.Log("test");
         }
         Debug.Log(falldelay);
