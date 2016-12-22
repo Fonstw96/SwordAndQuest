@@ -207,7 +207,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -361,7 +361,7 @@ ModelImporter:
         weight: 1
       - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRBeard1/heroRBeard2/heroRBeard3
         weight: 1
-      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/Monkey_hat_LOD0
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/Monkey_hat_LOD1
         weight: 1
       - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
         weight: 1
@@ -404,9 +404,9 @@ ModelImporter:
         weight: 1
       - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
         weight: 1
-      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Monkey_Staff_LOD0
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Monkey_Staff_LOD1
         weight: 1
-      - path: Monkey_LOD0
+      - path: Monkey_LOD1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1691,7 +1691,7 @@ ModelImporter:
         weight: 1
       - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRBeard1/heroRBeard2/heroRBeard3
         weight: 1
-      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/Monkey_hat_LOD0
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/Monkey_hat_LOD1
         weight: 1
       - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
         weight: 1
@@ -1734,9 +1734,9 @@ ModelImporter:
         weight: 1
       - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
         weight: 1
-      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Monkey_Staff_LOD0
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Monkey_Staff_LOD1
         weight: 1
-      - path: Monkey_LOD0
+      - path: Monkey_LOD1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
