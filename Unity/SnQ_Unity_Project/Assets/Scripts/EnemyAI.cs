@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     public int iMaxAttackMilliseconds = 250;
      private int iRand = 0;
 
+    public bool dummy = false;
      private Animator anim;
     public float fRunSpeed = 0.45f;
 
@@ -68,7 +69,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     iRand = Random.Range(1, 3);
                     anim.SetInteger("moving", 2 + iRand);
-
+                    
                     goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
                     // goTarget.lives--;
 

@@ -5,31 +5,40 @@ public class Player : MonoBehaviour
 {
     private GameObject goEnemy;
     private Collider cEnemy;
-
+    private Rigidbody rb;
     private Animator anim;
     
     protected float angle;
+    private float speed;
+    private float maxSpeed;
+    
+
+    public float fSpeed = 0.45f;
+    protected float fDistance = 0;
+    public float fAttackRange = 2;
 
     public int levens = 10;
     private int attack;
-
-     public float fSpeed = 0.45f;
-    private float speed;
+    private int falldelay = 0;
 
     bool walk;
     bool run;
-    protected bool bDead = false;
 
-    protected bool bDefend = false;
+    bool inAir = true;
+
+    protected bool bDead = false;
+    public bool sword = false;
     protected bool bAttack = false;
-    protected float fDistance = 0;
-     public float fAttackRange = 2;
+    
+
+    
     
     void Start()
     {
         anim = GetComponent<Animator>();
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         cEnemy = goEnemy.GetComponent<Collider>();
+        rb = GetComponent<Rigidbody>();
 
     }
     
@@ -46,72 +55,105 @@ public class Player : MonoBehaviour
         }
     }
 
-    void HandleMovement()
+    void FixedUpdate()
     {
+        float magnitude;
         float InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
-        float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
 
+        Vector3 movement = transform.forward * 10;
+        //Vector3 gravity = new Vector3(0, 35, 0);
+
+        
+        //rb.AddForce(gravity * -10);
+        //rb.AddForce(movement * 10);
         // handle speed and animations
         if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
         {
-            speed = fSpeed * 1.5f;
+            rb.AddForce(movement * 10);
             run = true;
             walk = false;
+            maxSpeed = 20;
         }
         else if (InputV > 0)
         {
-            speed = fSpeed * 0.75f;
+            rb.AddForce(movement * 5);
             run = false;
             walk = true;
+            maxSpeed = 10;
         }
         else if (InputV < 0)
         {
-            speed = fSpeed * 0.75f;
+            rb.AddForce(movement * -5);
             run = false;
             walk = true;
+            maxSpeed = 10;
         }
-        else
+        else if ( InputV == 0)
         {
-            speed = fSpeed;
+            rb.velocity = rb.velocity * 0.5f;
             run = false;
             walk = false;
+            
         }
 
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            magnitude = rb.velocity.magnitude;
+            rb.velocity = Vector3.zero;
+            rb.velocity = transform.forward * magnitude * speed * 0.5f;
+
+        }
+
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
+
+        if (inAir == true)
+        {
+            if(falldelay == 0)
+            GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
+            Debug.Log("test");
+        }
+        Debug.Log(falldelay);
+    }
+
+    void HandleMovement()
+    {
+        
+        float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
+
         // forward/backward
-        transform.Translate(0, 0, speed * InputV);
+        //getting handled in fixed update
 
         // left/right
         angle = 4 * InputH;
         transform.Rotate(0, angle, 0);
 
-
-
         anim.SetBool("Walk", walk);
         anim.SetBool("Run", run);
+
+        //handle gravity with fixed update
+        falldelay--;
+        if (falldelay <= 0) falldelay = 0;
     }
 
     private void HandleCombat()
     {
         if (levens <= 0)
             bDead = true;
-        else
+        else if(sword == true)
         {
             bool LMB = Input.GetMouseButtonDown(0);
             bool RMB = Input.GetMouseButtonDown(1);
 
-            if (RMB)
-            {
-                bDefend = true;
-                bAttack = false;
-            }
-            else if (LMB)
-            {
-                bDefend = false;
+            if (LMB)
+            { 
                 bAttack = true;
                 if (attack == 3)
                 {
                     anim.SetTrigger("Attack 2");
-                    attack = 0;
+                    attack = 1;
                 }
                 else
                 {
@@ -145,9 +187,26 @@ public class Player : MonoBehaviour
 
     private void LifeLoss()
     {
-        if (!bDefend)
+        if(!goEnemy.GetComponent<EnemyAI>().dummy)
             levens--;
 
         anim.SetTrigger("Hit");
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "Terrain")
+        {
+            inAir = false;
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "Terrain")
+        {
+            inAir = true;
+            falldelay = 10;
+        }
     }
 }
