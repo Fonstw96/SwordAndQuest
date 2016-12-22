@@ -4,16 +4,16 @@ using System.Collections;
 public class EnemyAI : MonoBehaviour
 {
     public int id = 0;
-    public int iLives = 0;
+    public int iLives = 2;
      private GameObject goTarget;
      protected float fDistance = 0;
     public float fAttackRange = 2;
     public float fPerceptionRange = 15;
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
+     private int iAttackSequence = -1;
     public int iMinAttackMilliseconds = 100;
     public int iMaxAttackMilliseconds = 250;
-     private int iRand = 0;
 
     public bool dummy = false;
      private Animator anim;
@@ -21,6 +21,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start ()
     {
+        transform.Rotate(0, Random.Range(0, 360), 0);
+
         goTarget = GameObject.FindGameObjectWithTag("Player");
 
         fLastAttack = 0;
@@ -32,46 +34,43 @@ public class EnemyAI : MonoBehaviour
         fDistance = CalculateDistance(goTarget);
 	}
 
-    void FixedUpdate()
-    {
-    }
-
     void Update()
     {
         /* ====== DIE ====== */
-        if (iLives < 0)
+        if (iLives <= 0)
         {
-            if (anim.GetInteger("moving") > 0/* && anim.GetInteger("moving") < 12*/)
-                anim.SetInteger("moving", 0);
-        }
-        else if (iLives == 0)
-        {
-            iRand = Random.Range(1, 3);
-            anim.SetInteger("battle", 0);
-            anim.SetInteger("moving", 11 + iRand);
-
-            iLives = -1;
+            anim.SetTrigger("Die");
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<Collider>());
         }
         /* ====== LIFE ====== */
-        else
+        else if (iLives > 0 && goTarget.GetComponent<Player>().levens > 0)
         {
             fDistance = CalculateDistance(goTarget);
 
             /* ====== ATTACK ====== */
             if (fDistance < fAttackRange)
             {
-                if (iRand != 0)
-                    iRand = 0;
-                else
-                    anim.SetInteger("moving", 0);
+                anim.SetBool("Run", false);
 
                 if (Time.time - fLastAttack > fAttackDelay)
                 {
+<<<<<<< HEAD
                     iRand = Random.Range(1, 3);
                     anim.SetInteger("moving", 2 + iRand);
                     
+=======
+                    iAttackSequence++;
+                    if (iAttackSequence == 1)
+                        anim.SetTrigger("Attack2");
+                    else
+                        anim.SetTrigger("Attack1");
+
+                    if (iAttackSequence >= 2)
+                        iAttackSequence = -1;
+
+>>>>>>> origin/Fons
                     goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
-                    // goTarget.lives--;
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
@@ -80,12 +79,7 @@ public class EnemyAI : MonoBehaviour
             /* ====== CHASE ====== */
             else if (fDistance < fPerceptionRange)
             {
-                if (anim.GetInteger("battle") == 0)
-                    anim.SetInteger("battle", 1);
-                if (anim.GetInteger("moving") > 2)
-                    anim.SetInteger("moving", 0);
-                else if (anim.GetInteger("moving") == 0)
-                    anim.SetInteger("moving", 2);
+                anim.SetBool("Run", true);
 
                 float angle = Mathf.Atan2(-(goTarget.transform.position.x - transform.position.x), goTarget.transform.position.z - transform.position.z);
                 float xspeed = Mathf.Sin(angle) * fRunSpeed;
@@ -98,10 +92,8 @@ public class EnemyAI : MonoBehaviour
             /* ====== IDLE ====== */
             else
             {
-                if (anim.GetInteger("moving") != 0)
-                    anim.SetInteger("moving", 0);
-                if (anim.GetInteger("battle") == 1)
-                    anim.SetInteger("battle", 0);
+                anim.SetBool("Run", false);
+                anim.SetBool("Walk", false);
             }
         }
     }
@@ -125,10 +117,15 @@ public class EnemyAI : MonoBehaviour
             iLives--;
 
             if (iLives > 0)
-            {
-                iRand = Random.Range(1, 3);
-                anim.SetInteger("moving", 9 + iRand);
-            }
+                anim.SetTrigger("Hit");
+            else
+                Debug.Log("Enemy " + id + " died.");
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().bAttack && Vector3.Angle(other.transform.forward, transform.position - other.transform.position) < 15)
+            LifeLoss();
     }
 }
