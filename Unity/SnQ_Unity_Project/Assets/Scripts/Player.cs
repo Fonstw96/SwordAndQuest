@@ -3,7 +3,6 @@ using System;
 
 public class Player : MonoBehaviour
 {
-<<<<<<< HEAD
     private GameObject goEnemy;
     private Collider cEnemy;
     private Rigidbody rb;
@@ -29,36 +28,13 @@ public class Player : MonoBehaviour
 
     protected bool bDead = false;
     public bool sword = false;
-    protected bool bAttack = false;
-    
-
-    
-    
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        goEnemy = GameObject.FindGameObjectWithTag("Enemy");
-        cEnemy = goEnemy.GetComponent<Collider>();
-        rb = GetComponent<Rigidbody>();
-
-=======
-     protected Animator anim;
-    
-     protected float angle;
-
-    public int levens = 5;
-     private int iInitialLives = 0;
-     private float fLastRegen = 0;
-    public float fRegenDelay = 3;
-
-    public float fSpeed = 0.45f;
-     private float speed;
-    
-     protected bool bDead = false;
-    
     public bool bAttack = false;
 
-     public int[] iInventory;
+    private int iInitialLives = 0;
+    private float fLastRegen = 0;
+    public float fRegenDelay = 3;
+
+    public int[] iInventory;
 
     protected struct Target
     {
@@ -72,11 +48,13 @@ public class Player : MonoBehaviour
         public float fDistance;
     }
 
+
     void Start()
     {
-        //anim = GetComponent<Animator>();
-
         anim = GetComponent<Animator>();
+        goEnemy = GameObject.FindGameObjectWithTag("Enemy");
+        cEnemy = goEnemy.GetComponent<Collider>();
+        rb = GetComponent<Rigidbody>();
 
         if (UIController.imInventory != null)
         {
@@ -90,7 +68,6 @@ public class Player : MonoBehaviour
         }
 
         iInitialLives = levens;
->>>>>>> origin/Fons
     }
     
     void Update()
@@ -118,7 +95,6 @@ public class Player : MonoBehaviour
         // handle speed and animations
         if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
         {
-<<<<<<< HEAD
             rb.AddForce(movement * 10);
             run = true;
             walk = false;
@@ -157,29 +133,6 @@ public class Player : MonoBehaviour
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
-=======
-            speed = fSpeed * 1.5f;
-
-            anim.SetInteger("Animation", 2);
-        }
-        else if (InputV > 0)
-        {
-            speed = fSpeed;
-
-            anim.SetInteger("Animation", 1);
-        }
-        else if (InputV < 0)
-        {
-            speed = fSpeed * 0.75f;
-
-            anim.SetInteger("Animation", 1);
-        }
-        else if (!bAttack)
-        {
-            speed = fSpeed;
-            
-            anim.SetInteger("Animation", 0);
->>>>>>> origin/Fons
         }
 
         if (inAir == true)
@@ -188,7 +141,6 @@ public class Player : MonoBehaviour
             //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
             Debug.Log("test");
         }
-        Debug.Log(falldelay);
     }
 
     void HandleMovement()
@@ -202,7 +154,6 @@ public class Player : MonoBehaviour
         // left/right
         angle = 4 * InputH;
         transform.Rotate(0, angle, 0);
-<<<<<<< HEAD
 
         anim.SetBool("Walk", walk);
         anim.SetBool("Run", run);
@@ -210,13 +161,11 @@ public class Player : MonoBehaviour
         //handle gravity with fixed update
         falldelay--;
         if (falldelay <= 0) falldelay = 0;
-=======
->>>>>>> origin/Fons
+
     }
 
     private void HandleCombat()
     {
-<<<<<<< HEAD
         if (levens <= 0)
             bDead = true;
         else if(sword == true)
@@ -239,16 +188,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-=======
-        if (Input.GetMouseButtonDown(0))
-            bAttack = true;
-        else
-            bAttack = false;
 
->>>>>>> origin/Fons
-
-        if (bAttack)
-            anim.SetInteger("Animation", 3 + UnityEngine.Random.Range(0, 2));   // 3..4
 
         if (levens < iInitialLives && Time.time - fLastRegen > fRegenDelay)
         {
@@ -281,11 +221,15 @@ public class Player : MonoBehaviour
 
     private void LifeLoss()
     {
-<<<<<<< HEAD
         if(!goEnemy.GetComponent<EnemyAI>().dummy)
             levens--;
 
-        anim.SetTrigger("Hit");
+        if (levens <= 0)
+            bDead = true;
+        else
+            anim.SetTrigger("Hit");
+
+        fLastRegen = Time.time;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -303,13 +247,5 @@ public class Player : MonoBehaviour
             inAir = true;
             falldelay = 10;
         }
-=======
-        anim.SetInteger("Animation", 5);
-        levens--;
-        if (levens <= 0)
-            bDead = true;
-
-        fLastRegen = Time.time;
->>>>>>> origin/Fons
     }
 }

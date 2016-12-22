@@ -55,11 +55,6 @@ public class EnemyAI : MonoBehaviour
 
                 if (Time.time - fLastAttack > fAttackDelay)
                 {
-<<<<<<< HEAD
-                    iRand = Random.Range(1, 3);
-                    anim.SetInteger("moving", 2 + iRand);
-                    
-=======
                     iAttackSequence++;
                     if (iAttackSequence == 1)
                         anim.SetTrigger("Attack2");
@@ -69,7 +64,6 @@ public class EnemyAI : MonoBehaviour
                     if (iAttackSequence >= 2)
                         iAttackSequence = -1;
 
->>>>>>> origin/Fons
                     goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
