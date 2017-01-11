@@ -3,41 +3,45 @@ using System;
 
 public class Player : MonoBehaviour
 {
-     protected Animator anim;
+    private GameObject goEnemy;
+    private Rigidbody rb;
+    private Animator anim;
     
-     protected float angle;
+    protected float angle = 0;
+    private float maxSpeed = 0;
+    
+
+    public float fSpeed = 0.2f;
+    public float fAttackRange = 2;
 
     public int levens = 5;
-     private int iInitialLives = 0;
-     private float fLastRegen = 0;
-    public float fRegenDelay = 3;
+    private int attack;
+    private int falldelay = 0;
 
-    public float fSpeed = 0.45f;
-     private float speed;
-    
-     protected bool bDead = false;
-    
+    bool walk;
+    bool run;
+
+    //bool inAir = true;
+
+    protected bool bDead = false;
+    public bool sword = false;
     public bool bAttack = false;
 
-     public int[] iInventory;
+    private int iInitialLives = 0;
+    private float fLastRegen = 0;
+    public float fRegenDelay = 5;
 
-    protected struct Target
-    {
-        public void Set(int id, float dis)
-        {
-            ID = id;
-            fDistance = dis;
-        }
-
-        public int ID;
-        public float fDistance;
-    }
+    public int[] iInventory;
 
     void Start()
     {
-        //anim = GetComponent<Animator>();
-
         anim = GetComponent<Animator>();
+
+        goEnemy = GameObject.FindGameObjectWithTag("Enemy");
+        if (goEnemy == null)
+            goEnemy = GameObject.FindGameObjectWithTag("Boss");
+
+        rb = GetComponent<Rigidbody>();
 
         if (UIController.imInventory != null)
         {
@@ -57,62 +61,116 @@ public class Player : MonoBehaviour
     {
         if (!bDead)
         {
-            HandleMovement();
             HandleCombat();
+
+            // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
+            anim.SetBool("Walk", walk);
+            anim.SetBool("Run", run);
         }
         else
-            anim.SetInteger("Animation", 99);
+            anim.SetTrigger("Die");
     }
 
-    void HandleMovement()
+    void FixedUpdate()
     {
-        float InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
-        float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
-
-        // handle speed and animations
-        if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
+        if (!bDead)
         {
-            speed = fSpeed * 1.5f;
+            float magnitude;
+            float InputV = Input.GetAxis("Vertical");
+            float InputH = Input.GetAxis("Horizontal");
 
-            anim.SetInteger("Animation", 2);
+            bool InputRun = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton5);
+
+            Vector3 movement = transform.forward * 100.0f * fSpeed;
+            float speed = fSpeed;
+            //Vector3 gravity = new Vector3(0, 35, 0);
+
+
+            //rb.AddForce(gravity * -10);
+            //rb.AddForce(movement * 10);
+            // handle speed and animations
+
+            if (InputRun && InputV > 0)
+            {
+                rb.AddForce(movement * 1.5f);
+                speed *= 1.5f;
+                run = true;
+                walk = false;
+                maxSpeed = 20;
+            }
+            else if (InputV != 0)
+            {
+                if (InputV > 0)
+                    rb.AddForce(movement);
+                else
+                    rb.AddForce(-movement);
+                run = false;
+                walk = true;
+                maxSpeed = 10;
+            }
+            else
+            {
+                rb.velocity = Vector3.zero;
+                run = false;
+                walk = false;
+            }
+
+            if (InputH != 0)
+            {
+                //magnitude = rb.velocity.magnitude;
+                //rb.velocity = Vector3.zero;
+                //rb.velocity = transform.forward * magnitude * speed * 0.5f;
+
+                angle = 4 * InputH;
+                transform.Rotate(0, angle, 0);
+            }
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                magnitude = rb.velocity.magnitude;
+                rb.velocity = Vector3.zero;
+                rb.velocity = transform.forward * magnitude * speed * 0.5f;
+            }
+
+            if (rb.velocity.magnitude > maxSpeed)
+            {
+                rb.velocity = rb.velocity.normalized * maxSpeed;
+            }
+
+            falldelay--;
+            if (falldelay <= 0) falldelay = 0;
+
+            //if (inAir == true)
+            //{
+            //    if(falldelay == 0)
+            //    //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
+            //    Debug.Log("test");
+            //}
         }
-        else if (InputV > 0)
-        {
-            speed = fSpeed;
-
-            anim.SetInteger("Animation", 1);
-        }
-        else if (InputV < 0)
-        {
-            speed = fSpeed * 0.75f;
-
-            anim.SetInteger("Animation", 1);
-        }
-        else if (!bAttack)
-        {
-            speed = fSpeed;
-            
-            anim.SetInteger("Animation", 0);
-        }
-
-        // forward/backward
-        transform.Translate(0, 0, speed * InputV);
-
-        // left/right
-        angle = 4 * InputH;
-        transform.Rotate(0, angle, 0);
     }
 
     private void HandleCombat()
     {
-        if (Input.GetMouseButtonDown(0))
-            bAttack = true;
-        else
-            bAttack = false;
+        if (levens <= 0)
+            bDead = true;
+        else if (sword == true)
+        {
+            bAttack = Input.GetButtonDown("Fire1");
 
+            if (bAttack)
+            {
+                if (attack >= 3)
+                {
+                    anim.SetTrigger("Attack 2");
+                    attack = 1;
+                }
+                else
+                {
+                    anim.SetTrigger("Attack1");
+                    attack++;
+                }
+            }
+        }
 
-        if (bAttack)
-            anim.SetInteger("Animation", 3 + UnityEngine.Random.Range(0, 2));   // 3..4
 
         if (levens < iInitialLives && Time.time - fLastRegen > fRegenDelay)
         {
@@ -145,11 +203,41 @@ public class Player : MonoBehaviour
 
     private void LifeLoss()
     {
-        anim.SetInteger("Animation", 5);
-        levens--;
+        if (goEnemy.tag == "Enemy")
+        {
+            if (!goEnemy.GetComponent<EnemyAI>().dummy)   // dit staat hier en niet hierboven vanwege errors
+                levens--;
+        }
+        else if (goEnemy.tag == "Boss")
+        {
+            if (goEnemy.GetComponent<BossAI>().iLives == 3)   // hetzelfde verhaal
+                levens -= 2;
+            else
+                levens -= 3;
+        }
+
         if (levens <= 0)
             bDead = true;
+        else
+            anim.SetTrigger("Hit");
 
         fLastRegen = Time.time;
+    }
+
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.name == "Terrain")
+    //    {
+    //        inAir = false;
+    //    }
+    //}
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "Terrain")
+        {
+            //inAir = true;
+            falldelay = 10;
+        }
     }
 }

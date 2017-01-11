@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnemyAI : MonoBehaviour
 {
-    public int id = 0;
+    public int id = 0;   // for debugging
     public int iLives = 2;
      private GameObject goTarget;
      protected float fDistance = 0;
@@ -15,10 +14,11 @@ public class EnemyAI : MonoBehaviour
     public int iMinAttackMilliseconds = 100;
     public int iMaxAttackMilliseconds = 250;
 
+    public bool dummy = false;
      private Animator anim;
     public float fRunSpeed = 0.45f;
 
-    void Start ()
+    void Start()
     {
         transform.Rotate(0, Random.Range(0, 360), 0);
 
@@ -33,17 +33,9 @@ public class EnemyAI : MonoBehaviour
         fDistance = CalculateDistance(goTarget);
 	}
 
-    void Update()
+    void FixedUpdate()
     {
-        /* ====== DIE ====== */
-        if (iLives <= 0)
-        {
-            anim.SetTrigger("Die");
-            Destroy(GetComponent<Rigidbody>());
-            Destroy(GetComponent<Collider>());
-        }
-        /* ====== LIFE ====== */
-        else if (iLives > 0 && goTarget.GetComponent<Player>().levens > 0)
+        if (goTarget.GetComponent<Player>().levens > 0)
         {
             fDistance = CalculateDistance(goTarget);
 
@@ -86,7 +78,7 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 anim.SetBool("Run", false);
-                anim.SetBool("Walk", false);
+                //anim.SetBool("Walk", false);
             }
         }
     }
@@ -105,14 +97,22 @@ public class EnemyAI : MonoBehaviour
 
     private void LifeLoss()
     {
-        if (iLives > 0)
-        {
-            iLives--;
+        Debug.Log("Enemy " + id + " got hit, " + iLives + " lives left!");
+        iLives--;
 
-            if (iLives > 0)
-                anim.SetTrigger("Hit");
-            else
-                Debug.Log("Enemy " + id + " died.");
+        /* ====== PAIN ===== */
+        if (iLives > 0)
+            anim.SetTrigger("Hit");
+        /* ====== DEATH ====== */
+        else
+        {
+            anim.SetTrigger("Die");
+            // Destroy RB en CC zodat je over de lijken heen loopt.
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<CapsuleCollider>());
+            // Destroy script voor performance
+            Destroy(GetComponent<EnemyAI>());
+            // We laten het model en alles wel staan zodat je de enemy nog wel kan zien vallen en liggen
         }
     }
 

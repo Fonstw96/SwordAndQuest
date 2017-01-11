@@ -6,10 +6,17 @@ public class WeaponPickUp : MonoBehaviour {
     public GameObject myWeapon;
     public GameObject WeaponOnGround;
 
+    private GameObject player;
+
+    public Player playerscript;
+
 	// Use this for initialization
 	void Start () {
         myWeapon.SetActive(false);
-	}
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        playerscript = player.GetComponent<Player>();
+    }
 	
     void OnTriggerEnter(Collider _collider)
     {
@@ -17,6 +24,8 @@ public class WeaponPickUp : MonoBehaviour {
         {
             myWeapon.SetActive(true);
             WeaponOnGround.SetActive(false);
+
+            playerscript.sword = true;
         }
         }
     

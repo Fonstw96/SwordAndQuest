@@ -6,6 +6,7 @@ public class DialogueHolder : MonoBehaviour {
     // Script by Delano
 
     private DialogueManager dialogueManager;
+    public GameObject npc;
 
     public string[] dialogueLines;
 
@@ -19,7 +20,7 @@ public class DialogueHolder : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.tag == "Player")
         {
             if (Input.GetKeyUp(KeyCode.Space) && !dialogueManager.dialogueBox.active)
             {
@@ -28,9 +29,10 @@ public class DialogueHolder : MonoBehaviour {
                     dialogueManager.dialogueLines = dialogueLines;
                     dialogueManager.currentLine = 0;
                     dialogueManager.ShowDialogue();
-                }
+                    npc.GetComponent<BehaviourNpc>().isWalking = true;
+                } 
 
-                // make npc stop moving
+
             }
         }
     }   
