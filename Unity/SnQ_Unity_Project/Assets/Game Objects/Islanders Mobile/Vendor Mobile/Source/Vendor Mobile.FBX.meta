@@ -1,0 +1,1876 @@
+fileFormatVersion: 2
+guid: 71b09eb9b62b0cd43aa0898c61e911ed
+timeCreated: 1467386356
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bottle
+    100002: Pan
+    100004: Staff
+    100006: Sword
+    100008: //RootNode
+    100010: Vendor
+    100012: heroBackpack1
+    100014: heroBackpack2
+    100016: heroBelly
+    100018: heroClothBack
+    100020: heroClothFront
+    100022: heroEyeL
+    100024: heroEyeR
+    100026: heroHairL1
+    100028: heroHairR1
+    100030: heroHat
+    100032: heroHatTip
+    100034: heroHead
+    100036: heroJaw
+    100038: heroLCalf
+    100040: heroLCloth
+    100042: heroLCollarbone
+    100044: heroLDigit11
+    100046: heroLDigit11 1
+    100048: heroLDigit12
+    100050: heroLDigit13
+    100052: heroLDigit21
+    100054: heroLDigit22
+    100056: heroLDigit23
+    100058: heroLDigit31
+    100060: heroLDigit32
+    100062: heroLDigit33
+    100064: heroLDigit41
+    100066: heroLDigit42
+    100068: heroLDigit43
+    100070: heroLDigit51
+    100072: heroLDigit52
+    100074: heroLDigit53
+    100076: heroLFoot
+    100078: heroLForearm
+    100080: heroLMustache
+    100082: heroLPalm
+    100084: heroLThigh
+    100086: heroLUpperarm
+    100088: heroNeck
+    100090: heroNecklace
+    100092: heroNose
+    100094: heroPan
+    100096: heroPelvis
+    100098: heroRCalf
+    100100: heroRCloth
+    100102: heroRCollarbone
+    100104: heroRDigit11
+    100106: heroRDigit11 1
+    100108: heroRDigit12
+    100110: heroRDigit13
+    100112: heroRDigit21
+    100114: heroRDigit22
+    100116: heroRDigit23
+    100118: heroRDigit31
+    100120: heroRDigit32
+    100122: heroRDigit33
+    100124: heroRDigit41
+    100126: heroRDigit42
+    100128: heroRDigit43
+    100130: heroRDigit51
+    100132: heroRDigit52
+    100134: heroRDigit53
+    100136: heroRFoot
+    100138: heroRForearm
+    100140: heroRibcage
+    100142: heroRMustache
+    100144: heroRPalm
+    100146: heroRThigh
+    100148: heroRUpperarm
+    100150: heroSpine1
+    100152: heroSpine2
+    100154: heroSpine3
+    100156: heroSpine4
+    100158: heroStick
+    100160: heroSwords
+    100162: herow
+    100164: Staff_LOD0
+    100166: Staff_LOD1
+    100168: Vendor_LOD0
+    100170: Bottle_LOD0
+    100172: Bottle_LOD1
+    100174: Pan_LOD0
+    100176: Pan_LOD1
+    100178: Sword_LOD0
+    100180: Sword_LOD1
+    100182: Vendor_LOD1
+    400000: Bottle
+    400002: Pan
+    400004: Staff
+    400006: Sword
+    400008: //RootNode
+    400010: Vendor
+    400012: heroBackpack1
+    400014: heroBackpack2
+    400016: heroBelly
+    400018: heroClothBack
+    400020: heroClothFront
+    400022: heroEyeL
+    400024: heroEyeR
+    400026: heroHairL1
+    400028: heroHairR1
+    400030: heroHat
+    400032: heroHatTip
+    400034: heroHead
+    400036: heroJaw
+    400038: heroLCalf
+    400040: heroLCloth
+    400042: heroLCollarbone
+    400044: heroLDigit11
+    400046: heroLDigit11 1
+    400048: heroLDigit12
+    400050: heroLDigit13
+    400052: heroLDigit21
+    400054: heroLDigit22
+    400056: heroLDigit23
+    400058: heroLDigit31
+    400060: heroLDigit32
+    400062: heroLDigit33
+    400064: heroLDigit41
+    400066: heroLDigit42
+    400068: heroLDigit43
+    400070: heroLDigit51
+    400072: heroLDigit52
+    400074: heroLDigit53
+    400076: heroLFoot
+    400078: heroLForearm
+    400080: heroLMustache
+    400082: heroLPalm
+    400084: heroLThigh
+    400086: heroLUpperarm
+    400088: heroNeck
+    400090: heroNecklace
+    400092: heroNose
+    400094: heroPan
+    400096: heroPelvis
+    400098: heroRCalf
+    400100: heroRCloth
+    400102: heroRCollarbone
+    400104: heroRDigit11
+    400106: heroRDigit11 1
+    400108: heroRDigit12
+    400110: heroRDigit13
+    400112: heroRDigit21
+    400114: heroRDigit22
+    400116: heroRDigit23
+    400118: heroRDigit31
+    400120: heroRDigit32
+    400122: heroRDigit33
+    400124: heroRDigit41
+    400126: heroRDigit42
+    400128: heroRDigit43
+    400130: heroRDigit51
+    400132: heroRDigit52
+    400134: heroRDigit53
+    400136: heroRFoot
+    400138: heroRForearm
+    400140: heroRibcage
+    400142: heroRMustache
+    400144: heroRPalm
+    400146: heroRThigh
+    400148: heroRUpperarm
+    400150: heroSpine1
+    400152: heroSpine2
+    400154: heroSpine3
+    400156: heroSpine4
+    400158: heroStick
+    400160: heroSwords
+    400162: herow
+    400164: Staff_LOD0
+    400166: Staff_LOD1
+    400168: Vendor_LOD0
+    400170: Bottle_LOD0
+    400172: Bottle_LOD1
+    400174: Pan_LOD0
+    400176: Pan_LOD1
+    400178: Sword_LOD0
+    400180: Sword_LOD1
+    400182: Vendor_LOD1
+    2300000: Bottle
+    2300002: Pan
+    2300004: Staff
+    2300006: Sword
+    2300008: Vendor
+    2300010: Staff_LOD0
+    2300012: Staff_LOD1
+    2300014: Bottle_LOD0
+    2300016: Bottle_LOD1
+    2300018: Pan_LOD0
+    2300020: Pan_LOD1
+    2300022: Sword_LOD0
+    2300024: Sword_LOD1
+    3300000: Bottle
+    3300002: Pan
+    3300004: Staff
+    3300006: Sword
+    3300008: Vendor
+    3300010: Staff_LOD0
+    3300012: Staff_LOD1
+    3300014: Bottle_LOD0
+    3300016: Bottle_LOD1
+    3300018: Pan_LOD0
+    3300020: Pan_LOD1
+    3300022: Sword_LOD0
+    3300024: Sword_LOD1
+    4300000: Vendor
+    4300002: Staff
+    4300004: Sword
+    4300006: Pan
+    4300008: Bottle
+    4300010: Vendor_LOD0
+    4300012: Staff_LOD0
+    4300014: Staff_LOD1
+    4300016: Vendor_LOD1
+    4300018: Bottle_LOD1
+    4300020: Bottle_LOD0
+    4300022: Pan_LOD0
+    4300024: Pan_LOD1
+    4300026: Sword_LOD1
+    4300028: Sword_LOD0
+    7400000: idle
+    7400002: idle break
+    7400004: hit
+    7400006: attack1
+    7400008: attack2
+    7400010: death
+    7400012: walk
+    7400014: run
+    9500000: //RootNode
+    13700000: Vendor_LOD0
+    13700002: Vendor_LOD1
+    20500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottle_LOD0
+        weight: 1
+      - path: Bottle_LOD1
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Pan_LOD1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Sword_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Sword_LOD1
+        weight: 1
+      - path: Pan_LOD0
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      - path: Vendor_LOD1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle break
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack1
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack2
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 210
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 300
+      lastFrame: 330
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 400
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 450
+      lastFrame: 475
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: heroPelvis
+        weight: 1
+      - path: heroPelvis/heroClothBack
+        weight: 1
+      - path: heroPelvis/heroClothFront
+        weight: 1
+      - path: heroPelvis/heroLCloth
+        weight: 1
+      - path: heroPelvis/heroLThigh
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot
+        weight: 1
+      - path: heroPelvis/heroLThigh/heroLCalf/heroLFoot/heroLDigit11
+        weight: 1
+      - path: heroPelvis/heroRCloth
+        weight: 1
+      - path: heroPelvis/heroRThigh
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot
+        weight: 1
+      - path: heroPelvis/heroRThigh/heroRCalf/heroRFoot/heroRDigit11
+        weight: 1
+      - path: heroPelvis/heroSpine1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroBelly
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroBackpack2/heroPan
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroStick
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/heroSwords
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroBackpack1/herow
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit11
+          1/heroLDigit12/heroLDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit21/heroLDigit22/heroLDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit31/heroLDigit32/heroLDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit41/heroLDigit42/heroLDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroLCollarbone/heroLUpperarm/heroLForearm/heroLPalm/heroLDigit51/heroLDigit52/heroLDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeL
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroEyeR
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairL1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHairR1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroHat/heroHatTip
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroJaw
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroLMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroNose
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNeck/heroHead/heroRMustache
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroNecklace
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit11
+          1/heroRDigit12/heroRDigit13
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit21/heroRDigit22/heroRDigit23
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit31/heroRDigit32/heroRDigit33
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit41/heroRDigit42/heroRDigit43
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/heroRDigit51/heroRDigit52/heroRDigit53
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD0
+        weight: 1
+      - path: heroPelvis/heroSpine1/heroSpine2/heroSpine3/heroSpine4/heroRibcage/heroRCollarbone/heroRUpperarm/heroRForearm/heroRPalm/Staff_LOD1
+        weight: 1
+      - path: Vendor_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

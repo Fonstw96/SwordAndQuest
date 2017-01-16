@@ -4,15 +4,10 @@ using System;
 public class Player : MonoBehaviour
 {
     private GameObject goEnemy;
-<<<<<<< HEAD
     private Collider cEnemy;
     private Rigidbody rb;
     private Animator anim;
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> master
     protected float angle;
     private float speed;
     private float maxSpeed;
@@ -25,61 +20,33 @@ public class Player : MonoBehaviour
     private float InputVt = 0;
     private float InputV;
 
-    public int levens = 10;
+    public int levens = 7;
     private int attack;
 
     bool walk;
     bool run;
 
-<<<<<<< HEAD
-    protected bool bDead = false;
-=======
-    bool inAir = true;
 
     public bool bDead = false;
->>>>>>> master
+
+    bool inAir = true;
+
     public bool sword = false;
     public bool bAttack = false;
     private bool versnel = false;
     private bool isGrounded = true;
 
-    private int iInitialLives = 0;
+    public int iInitialLives = 0;
     private float fLastRegen = 0;
     public float fRegenDelay = 3;
 
     public int[] iInventory;
-=======
-    private Rigidbody rb;
-    private Animator anim;
-    
-    protected float angle = 0;
-    private float maxSpeed = 0;
-    
-    public float fSpeed = 0.2f;
-    public float fAttackRange = 2;
-    private float fLastRegen = 0;
-    public float fRegenDelay = 5;
 
-    public int levens = 5;
-    public int iInitialLives = 0;
-    private int attack;
     private int falldelay = 0;
-
-    bool walk;
-    bool run;
-
-    //bool inAir = true;
->>>>>>> origin/Fons
-
-    protected bool bDead = false;
-    public bool sword = false;
-    public bool bAttack = false;
-
-    public int[] iInventory;
-
 
     void Start()
     {
+        bDead = false;
         isGrounded = false;
         anim = GetComponent<Animator>();
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
@@ -122,44 +89,30 @@ public class Player : MonoBehaviour
         if (!bDead)
         {
             HandleCombat();
+            HandleMovement();
 
             // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
             anim.SetBool("Walk", walk);
             anim.SetBool("Run", run);
         }
         else
-<<<<<<< HEAD
+        { 
             anim.SetTrigger("Die");
-
-        
-=======
-<<<<<<< HEAD
-        {
-            anim.SetInteger("Animation", 99);
             transform.GetComponent<Respawn>().RespawnPlayer();
         }
-=======
-            anim.SetTrigger("Die");
->>>>>>> origin/Fons
->>>>>>> master
+
     }
 
     void FixedUpdate()
     {
-<<<<<<< HEAD
         if (!bDead)
         {
             float magnitude;
             float fallspeed;
-=======
-<<<<<<< HEAD
-        float magnitude;
-        float InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
->>>>>>> master
+
 
             Vector3 movement = transform.forward * 10;
 
-<<<<<<< HEAD
             // handle speed and animations
             if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
             {
@@ -184,119 +137,93 @@ public class Player : MonoBehaviour
                 walk = true;
                 maxSpeed = 10;
             }
-=======
-        rb.useGravity = true;
 
-  
+            rb.useGravity = true;
 
-        //rb.AddForce(gravity * -10);
-        //rb.AddForce(movement * 10);
-        // handle speed and animations
-        if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
-        {
-            rb.AddForce(movement * 10);
-            run = true;
-            walk = false;
-            maxSpeed = 20;
-        }
-        else if (InputV > 0)
-        {
 
-            rb.AddForce(movement * 5);
-            run = false;
-            walk = true;
-            maxSpeed = 10;
-        }
-        else if (InputV < 0)
-        {
-            rb.AddForce(movement * -5);
-            run = false;
-            walk = true;
-            maxSpeed = 10;
-        }
-        else if ( InputV == 0)
-        {
-            rb.velocity = rb.velocity * 0.5f;
-            run = false;
-            walk = false;
->>>>>>> master
-            
 
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            //rb.AddForce(gravity * -10);
+            //rb.AddForce(movement * 10);
+            // handle speed and animations
+            if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
             {
-                magnitude = rb.velocity.magnitude;
-                rb.velocity = Vector3.zero;
-                rb.velocity = transform.forward * magnitude * speed * 0.5f;
+                rb.AddForce(movement * 10);
+                run = true;
+                walk = false;
+                maxSpeed = 20;
             }
-
-            if (rb.velocity.magnitude > maxSpeed)
+            else if (InputV > 0)
             {
-                rb.velocity = rb.velocity.normalized * maxSpeed;
+
+                rb.AddForce(movement * 5);
+                run = false;
+                walk = true;
+                maxSpeed = 10;
             }
-
-            InputVt = InputV;
-
-<<<<<<< HEAD
-            //gravity
-            fallspeed = 0;
-
-            Vector3 gravity = new Vector3(0.0f, 9.81f, 0.0f) * -1;
-
-
-            if (isGrounded == false)
-                fallspeed += 50;
-            else if (isGrounded == true)
+            else if (InputV < 0)
             {
+                rb.AddForce(movement * -5);
+                run = false;
+                walk = true;
+                maxSpeed = 10;
+            }
+            else if (InputV == 0)
+            {
+                rb.velocity = rb.velocity * 0.5f;
+                run = false;
+                walk = false;
+
+
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+                {
+                    magnitude = rb.velocity.magnitude;
+                    rb.velocity = Vector3.zero;
+                    rb.velocity = transform.forward * magnitude * speed * 0.5f;
+                }
+
+                if (rb.velocity.magnitude > maxSpeed)
+                {
+                    rb.velocity = rb.velocity.normalized * maxSpeed;
+                }
+
+                InputVt = InputV;
+
+                //gravity
                 fallspeed = 0;
 
+                Vector3 gravity = new Vector3(0.0f, 9.81f, 0.0f) * -1;
+
+
+                if (isGrounded == false)
+                    fallspeed += 50;
+                else if (isGrounded == true)
+                {
+                    fallspeed = 0;
+
+                }
+
+
+
+                Vector3 downforce = gravity * fallspeed;
+
+                rb.AddForce(downforce, ForceMode.Acceleration);
+
+                if (inAir == true)
+                {
+                    //if (falldelay == 0)
+                    //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
+
+                }
+
+
             }
-                
-
-
-            Vector3 downforce = gravity * fallspeed;
-
-            rb.AddForce(downforce, ForceMode.Acceleration);
-=======
-        if (inAir == true)
-        {
-            if (falldelay == 0) ;
-            //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
-
->>>>>>> master
         }
-        
-        
     }
 
     void HandleMovement()
     {
-        InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
-        float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
-        
-
-        // forward/backward
-        if (InputV < 1 && versnel == false)
-        {
-            //rb.velocity = rb.velocity * 0.5f;
-            rb.velocity = Vector3.zero;
-            run = false;
-            walk = false;
-
-        }
-        //getting handled in fixed update
-
-        // left/right
-        angle = 4 * InputH;
-        transform.Rotate(0, angle, 0);
-
-        anim.SetBool("Walk", walk);
-        anim.SetBool("Run", run);
-
-        //handle gravity with fixed update
 
 
-
-=======
         if (!bDead)
         {
             float magnitude;
@@ -370,19 +297,15 @@ public class Player : MonoBehaviour
             //    Debug.Log("test");
             //}
         }
->>>>>>> origin/Fons
     }
 
     private void HandleCombat()
     {
         if (levens <= 0)
             bDead = true;
-<<<<<<< HEAD
-        else if (sword == true)
-=======
-<<<<<<< HEAD
+
+
         else if(sword == true)
->>>>>>> master
         {
             bool LMB = Input.GetMouseButtonDown(0);
             bool RMB = Input.GetMouseButtonDown(1);
@@ -390,16 +313,10 @@ public class Player : MonoBehaviour
             if (LMB)
             {
                 bAttack = true;
-                if (attack == 3)
-=======
-        else if (sword == true)
-        {
-            bAttack = Input.GetButtonDown("Fire1");
 
-            if (bAttack)
-            {
+
+            
                 if (attack >= 3)
->>>>>>> origin/Fons
                 {
                     anim.SetTrigger("Attack 2");
                     attack = 1;
@@ -444,16 +361,7 @@ public class Player : MonoBehaviour
 
     public void LifeLoss(int iDamage)
     {
-<<<<<<< HEAD
-        if (!goEnemy.GetComponent<EnemyAI>().dummy)
-=======
-<<<<<<< HEAD
-        if(!goEnemy.GetComponent<EnemyAI>().dummy)
->>>>>>> master
-            levens--;
-=======
         levens -= iDamage;
->>>>>>> origin/Fons
 
         if (levens <= 0)
             bDead = true;
@@ -463,12 +371,7 @@ public class Player : MonoBehaviour
         fLastRegen = Time.time;
     }
 
-<<<<<<< HEAD
     void OnCollisionEnter(Collision _Collision)
-=======
-<<<<<<< HEAD
-    private void OnCollisionEnter(Collision other)
->>>>>>> master
     {
         if (_Collision.gameObject.tag == "Terrain")
         {
@@ -479,15 +382,6 @@ public class Player : MonoBehaviour
             isGrounded = true;
         }
     }
-=======
-    //private void OnCollisionEnter(Collision other)
-    //{
-    //    if (other.gameObject.name == "Terrain")
-    //    {
-    //        inAir = false;
-    //    }
-    //}
->>>>>>> origin/Fons
 
     //consider when character is jumping .. it will exit collision.
     void OnCollisionExit(Collision _Collision)
@@ -495,19 +389,6 @@ public class Player : MonoBehaviour
         if (_Collision.gameObject.tag == "Terrain")
         {
             isGrounded = false;
-        }
-        if (_Collision.gameObject.tag == "Cave")
-        {
-<<<<<<< HEAD
-            isGrounded = false;
-=======
-<<<<<<< HEAD
-            inAir = true;
-=======
-            //inAir = true;
->>>>>>> origin/Fons
-            falldelay = 10;
->>>>>>> master
         }
     }
 
@@ -520,7 +401,7 @@ public class Player : MonoBehaviour
         if (startpos == 1) transform.position = new Vector3(458.9476f,0.3f, 46.84577f);//naar overworld van tutorial level
         if (startpos == 2) transform.position = new Vector3(73,0.01413554f,51);//naar tutorial level
         if (startpos == 3) transform.position = new Vector3(0, 0, 5);//naar temple
-        if (startpos == 4) transform.position = new Vector3(109,0.5f,102.6);//naar overworld van temple
+        if (startpos == 4) transform.position = new Vector3(109,0.5f,102.6f);//naar overworld van temple
         if (startpos == 5) transform.position = new Vector3(95, 0.31f, 321);//naar forest
         if (startpos == 6) transform.position = new Vector3(431.2f,0.5f,957.4f);//naar overworld van forest
         if (startpos == 7) transform.position = new Vector3(5, 0, 255);//naar maze
