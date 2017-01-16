@@ -4,20 +4,29 @@ using UnityEngine.SceneManagement;
 
 public class Teleport : MonoBehaviour
 {
-    public string scene;
-	void Start ()
+    public string scenedestination;
+    public int startpos;
+
+    private GameObject player;
+
+    public Player playerscript;
+    void Start()
     {
-	
-	}
-	
-	void Update ()
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        playerscript = player.GetComponent<Player>();
+    }
+
+    void Update()
     {
-	
-	}
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && scene != null)
-            SceneManager.LoadScene(scene);
+        if (other.gameObject.tag == "Player" && scenedestination != null)
+        {
+            PlayerPrefs.SetInt("startposision", startpos);
+            SceneManager.LoadScene(scenedestination);
+        }
     }
 }
