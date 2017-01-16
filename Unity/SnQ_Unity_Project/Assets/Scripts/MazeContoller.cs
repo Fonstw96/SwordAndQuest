@@ -26,7 +26,7 @@ public class MazeContoller : MonoBehaviour
         while (iRooms > 0)
         {
             int[] rand = { Random.Range(0, iRooms), Random.Range(0, iRooms) };
-            GameObject test = (GameObject)Instantiate(goPieces[rand[0]], v3Spawns[rand[1]], qnSpawns[rand[1]]);
+            Instantiate(goPieces[rand[0]], v3Spawns[rand[1]], qnSpawns[rand[1]]);
 
             goPieces.Remove(goPieces[rand[0]]);
             v3Spawns.Remove(v3Spawns[rand[1]]);
@@ -34,6 +34,10 @@ public class MazeContoller : MonoBehaviour
             
             iRooms = goPieces.Count;
         }
+
+        // Reset inventory for start of game, REMOVE FOR MERGE
+        for (int r=0; r<9; r++)
+            PlayerPrefs.SetInt("Inventory" + r, 0);
     }
 
 	void Update ()

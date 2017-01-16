@@ -13,7 +13,24 @@ public class Loot : MonoBehaviour
 
             if (index > -1)
             {
-                Debug.Log("You found a Health Potion!");
+                switch (iItem)
+                {
+                    case (1):
+                        Debug.Log("You found a Health Potion!");
+                        break;
+                    case (2):
+                        Debug.Log("You found Mythril Planks for your boat's bow!");
+                        break;
+                    case (3):
+                        Debug.Log("You found a roll of cloth for your boat's sail!");
+                        break;
+                    case (4):
+                        Debug.Log("You found a bag of tools to repair your boat with!");
+                        break;
+                    default:
+                        Debug.Log("You found something! What could it be?");
+                        break;
+                }
                 other.GetComponent<Player>().iInventory[index] = iItem;
                 iItem = 0;
             }

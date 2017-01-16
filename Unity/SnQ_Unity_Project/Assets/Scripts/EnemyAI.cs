@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnemyAI : MonoBehaviour
 {
-    public int id = 0;
+    public int id = 0;   // for debugging
     public int iLives = 2;
      private GameObject goTarget;
      protected float fDistance = 0;
@@ -15,16 +14,21 @@ public class EnemyAI : MonoBehaviour
     public int iMinAttackMilliseconds = 100;
     public int iMaxAttackMilliseconds = 250;
 
+<<<<<<< HEAD
     public bool isdead = false;
+=======
+>>>>>>> origin/Fons
     public bool dummy = false;
      private Animator anim;
     public float fRunSpeed = 0.45f;
 
-    void Start ()
+    void Start()
     {
         transform.Rotate(0, Random.Range(0, 360), 0);
 
         goTarget = GameObject.FindGameObjectWithTag("Player");
+        if (goTarget == null)
+            Debug.Log("Enemy " + id + " couldn't find a player!");
 
         fLastAttack = 0;
         fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
@@ -35,8 +39,9 @@ public class EnemyAI : MonoBehaviour
         fDistance = CalculateDistance(goTarget);
 	}
 
-    void Update()
+    void FixedUpdate()
     {
+<<<<<<< HEAD
         /* ====== DIE ====== */
         if (iLives <= 0)
         {
@@ -47,6 +52,9 @@ public class EnemyAI : MonoBehaviour
         }
         /* ====== LIFE ====== */
         else if (iLives > 0 && goTarget.GetComponent<Player>().levens > 0)
+=======
+        if (goTarget.GetComponent<Player>().levens > 0)
+>>>>>>> origin/Fons
         {
             fDistance = CalculateDistance(goTarget);
 
@@ -65,8 +73,9 @@ public class EnemyAI : MonoBehaviour
 
                     if (iAttackSequence >= 2)
                         iAttackSequence = -1;
-
-                    goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
+                    
+                    if (!dummy)
+                        goTarget.GetComponent<Player>().LifeLoss(1);
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
@@ -89,18 +98,18 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 anim.SetBool("Run", false);
-                anim.SetBool("Walk", false);
+                //anim.SetBool("Walk", false);
             }
         }
     }
 
     private float CalculateDistance(GameObject Target)
     {
-        float x_dist = this.transform.position.x - goTarget.transform.position.x;
+        float x_dist = this.transform.position.x - Target.transform.position.x;
         x_dist *= x_dist;
-        float y_dist = this.transform.position.y - goTarget.transform.position.y;
+        float y_dist = this.transform.position.y - Target.transform.position.y;
         y_dist *= y_dist;
-        float z_dist = this.transform.position.z - goTarget.transform.position.z;
+        float z_dist = this.transform.position.z - Target.transform.position.z;
         z_dist *= z_dist;
         
         return Mathf.Sqrt(x_dist + y_dist + z_dist);
@@ -108,14 +117,27 @@ public class EnemyAI : MonoBehaviour
 
     private void LifeLoss()
     {
-        if (iLives > 0)
-        {
-            iLives--;
+        //Debug.Log("Enemy " + id + " got hit, " + iLives + " lives left!");
+        iLives--;
 
-            if (iLives > 0)
-                anim.SetTrigger("Hit");
-            else
-                Debug.Log("Enemy " + id + " died.");
+        /* ====== PAIN ===== */
+        if (iLives > 0)
+            anim.SetTrigger("Hit");
+        /* ====== DEATH ====== */
+        else
+        {
+            GameObject Master = null;
+            Master = GameObject.FindGameObjectWithTag("Boss");
+            if (Master != null)
+                Master.SendMessage("MinionDied");
+
+            anim.SetTrigger("Die");
+            // Destroy RB en CC zodat je over de lijken heen kan lopen.
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<CapsuleCollider>());
+            // Destroy script voor performance
+            Destroy(GetComponent<EnemyAI>());
+            // We laten het model en alles wel staan zodat je de enemy nog wel kan zien vallen en liggen
         }
     }
 

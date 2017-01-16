@@ -22,7 +22,7 @@ public class DialogueHolder : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyUp(KeyCode.Space) && !dialogueManager.dialogueBox.active)
+            if (Input.GetKeyUp(KeyCode.Space) && !dialogueManager.dialogueBox.activeSelf)
             {
                 if (!dialogueManager.dialogueActive)
                 {
@@ -30,7 +30,10 @@ public class DialogueHolder : MonoBehaviour {
                     dialogueManager.currentLine = 0;
                     dialogueManager.ShowDialogue();
                     npc.GetComponent<BehaviourNpc>().isWalking = true;
+<<<<<<< HEAD
                     Debug.Log("iswaling true door DialogueHolder");
+=======
+>>>>>>> origin/Fons
                 } 
 
 
