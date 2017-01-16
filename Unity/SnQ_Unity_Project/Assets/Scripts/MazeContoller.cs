@@ -34,6 +34,10 @@ public class MazeContoller : MonoBehaviour
             
             iRooms = goPieces.Count;
         }
+
+        // Reset inventory for start of game, REMOVE FOR MERGE
+        for (int r=0; r<9; r++)
+            PlayerPrefs.SetInt("Inventory" + r, 0);
     }
 
 	void Update ()
