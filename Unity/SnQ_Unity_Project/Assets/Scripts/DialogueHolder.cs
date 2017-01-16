@@ -22,7 +22,7 @@ public class DialogueHolder : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyUp(KeyCode.Space) && !dialogueManager.dialogueBox.active)
+            if (Input.GetKeyUp(KeyCode.Space) && !dialogueManager.dialogueBox.activeSelf)
             {
                 if (!dialogueManager.dialogueActive)
                 {

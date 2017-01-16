@@ -23,6 +23,8 @@ public class EnemyAI : MonoBehaviour
         transform.Rotate(0, Random.Range(0, 360), 0);
 
         goTarget = GameObject.FindGameObjectWithTag("Player");
+        if (goTarget == null)
+            Debug.Log("Enemy " + id + " couldn't find a player!");
 
         fLastAttack = 0;
         fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
@@ -54,8 +56,9 @@ public class EnemyAI : MonoBehaviour
 
                     if (iAttackSequence >= 2)
                         iAttackSequence = -1;
-
-                    goTarget.GetComponent<Collider>().SendMessage("LifeLoss");
+                    
+                    if (!dummy)
+                        goTarget.GetComponent<Player>().LifeLoss(1);
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
@@ -85,11 +88,11 @@ public class EnemyAI : MonoBehaviour
 
     private float CalculateDistance(GameObject Target)
     {
-        float x_dist = this.transform.position.x - goTarget.transform.position.x;
+        float x_dist = this.transform.position.x - Target.transform.position.x;
         x_dist *= x_dist;
-        float y_dist = this.transform.position.y - goTarget.transform.position.y;
+        float y_dist = this.transform.position.y - Target.transform.position.y;
         y_dist *= y_dist;
-        float z_dist = this.transform.position.z - goTarget.transform.position.z;
+        float z_dist = this.transform.position.z - Target.transform.position.z;
         z_dist *= z_dist;
         
         return Mathf.Sqrt(x_dist + y_dist + z_dist);
@@ -97,7 +100,7 @@ public class EnemyAI : MonoBehaviour
 
     private void LifeLoss()
     {
-        Debug.Log("Enemy " + id + " got hit, " + iLives + " lives left!");
+        //Debug.Log("Enemy " + id + " got hit, " + iLives + " lives left!");
         iLives--;
 
         /* ====== PAIN ===== */
@@ -106,8 +109,13 @@ public class EnemyAI : MonoBehaviour
         /* ====== DEATH ====== */
         else
         {
+            GameObject Master = null;
+            Master = GameObject.FindGameObjectWithTag("Boss");
+            if (Master != null)
+                Master.SendMessage("MinionDied");
+
             anim.SetTrigger("Die");
-            // Destroy RB en CC zodat je over de lijken heen loopt.
+            // Destroy RB en CC zodat je over de lijken heen kan lopen.
             Destroy(GetComponent<Rigidbody>());
             Destroy(GetComponent<CapsuleCollider>());
             // Destroy script voor performance

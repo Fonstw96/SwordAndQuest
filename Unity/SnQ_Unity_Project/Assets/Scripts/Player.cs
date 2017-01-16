@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     protected float angle = 0;
     private float maxSpeed = 0;
     
-
     public float fSpeed = 0.2f;
     public float fAttackRange = 2;
+    private float fLastRegen = 0;
+    public float fRegenDelay = 5;
 
     public int levens = 5;
+    public int iInitialLives = 0;
     private int attack;
     private int falldelay = 0;
 
@@ -26,10 +28,6 @@ public class Player : MonoBehaviour
     protected bool bDead = false;
     public bool sword = false;
     public bool bAttack = false;
-
-    private int iInitialLives = 0;
-    private float fLastRegen = 0;
-    public float fRegenDelay = 5;
 
     public int[] iInventory;
 
@@ -47,6 +45,16 @@ public class Player : MonoBehaviour
         {
             iInventory = new int[UIController.imInventory.Length - 1];
             Debug.Log("Player's inventory size is " + iInventory.Length);
+
+            if (PlayerPrefs.HasKey("Inventory0"))
+            {
+                for (int i = 0; i < iInventory.Length; i++)
+                {
+                    int item = PlayerPrefs.GetInt("Inventory" + i);
+                    iInventory[i] = item;
+                    Debug.Log("Item " + item + " set into inventory slot " + i);
+                }
+            }
         }
         else
         {
@@ -201,20 +209,9 @@ public class Player : MonoBehaviour
         return Mathf.Sqrt(x_dist + y_dist + z_dist);
     }
 
-    private void LifeLoss()
+    public void LifeLoss(int iDamage)
     {
-        if (goEnemy.tag == "Enemy")
-        {
-            if (!goEnemy.GetComponent<EnemyAI>().dummy)   // dit staat hier en niet hierboven vanwege errors
-                levens--;
-        }
-        else if (goEnemy.tag == "Boss")
-        {
-            if (goEnemy.GetComponent<BossAI>().iLives == 3)   // hetzelfde verhaal
-                levens -= 2;
-            else
-                levens -= 3;
-        }
+        levens -= iDamage;
 
         if (levens <= 0)
             bDead = true;
