@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     public int iMinAttackMilliseconds = 100;
     public int iMaxAttackMilliseconds = 250;
 
+    public bool isdead = false;
     public bool dummy = false;
      private Animator anim;
     public float fRunSpeed = 0.45f;
@@ -39,6 +40,7 @@ public class EnemyAI : MonoBehaviour
         /* ====== DIE ====== */
         if (iLives <= 0)
         {
+            isdead = true;
             anim.SetTrigger("Die");
             Destroy(GetComponent<Rigidbody>());
             Destroy(GetComponent<Collider>());

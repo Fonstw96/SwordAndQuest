@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private Collider cEnemy;
     private Rigidbody rb;
     private Animator anim;
-    
+   
     protected float angle;
     private float speed;
     private float maxSpeed;
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     bool inAir = true;
 
-    protected bool bDead = false;
+    public bool bDead = false;
     public bool sword = false;
     public bool bAttack = false;
 
@@ -78,7 +78,10 @@ public class Player : MonoBehaviour
             HandleCombat();
         }
         else
+        {
             anim.SetInteger("Animation", 99);
+            transform.GetComponent<Respawn>().RespawnPlayer();
+        }
     }
 
     void FixedUpdate()
@@ -89,7 +92,10 @@ public class Player : MonoBehaviour
         Vector3 movement = transform.forward * 10;
         //Vector3 gravity = new Vector3(0, 35, 0);
 
-        
+        rb.useGravity = true;
+
+  
+
         //rb.AddForce(gravity * -10);
         //rb.AddForce(movement * 10);
         // handle speed and animations
@@ -102,6 +108,7 @@ public class Player : MonoBehaviour
         }
         else if (InputV > 0)
         {
+
             rb.AddForce(movement * 5);
             run = false;
             walk = true;
@@ -137,9 +144,9 @@ public class Player : MonoBehaviour
 
         if (inAir == true)
         {
-            if(falldelay == 0)
+            if (falldelay == 0) ;
             //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
-            Debug.Log("test");
+
         }
     }
 
