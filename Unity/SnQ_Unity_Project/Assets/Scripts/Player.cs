@@ -298,6 +298,7 @@ public class Player : MonoBehaviour
         if (startpos == 7) transform.position = new Vector3(5, 0, 255);//naar maze
         if (startpos == 8) transform.position = new Vector3(164.9f,0.5f,863.7f);//naar overworld van maze
 
+
         Debug.Log(startpos);
     }
 }
