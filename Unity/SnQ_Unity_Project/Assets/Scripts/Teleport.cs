@@ -14,7 +14,6 @@ public class Teleport : MonoBehaviour
 
 
 
-    public string scene;
 	void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player");

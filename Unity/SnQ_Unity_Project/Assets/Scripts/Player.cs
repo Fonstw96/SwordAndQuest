@@ -201,7 +201,7 @@ public class Player : MonoBehaviour
                     fallspeed = 0;
 
                 }
-
+                Debug.Log(isGrounded);
 
 
                 Vector3 downforce = gravity * fallspeed;
