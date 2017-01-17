@@ -91,20 +91,14 @@ public class NodeEvent : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "EscortNpc")
         {
-
-            if (EnemyEvent)
-            {
-            Debug.Log("NPC collided with EventNode");
-            other.gameObject.GetComponent<BehaviourNpc>().isWalking = false;
-            nodeEventFound = true;
             npc = other.gameObject;
-            }
-
-            else if (EndEvent)
-            {
+                if (EnemyEvent)
+                {
                 other.gameObject.GetComponent<BehaviourNpc>().isWalking = false;
-            }
-
+                nodeEventFound = true;
+                } else {
+                    other.gameObject.GetComponent<BehaviourNpc>().isWalking = false;
+                }
         }
     }
 }
