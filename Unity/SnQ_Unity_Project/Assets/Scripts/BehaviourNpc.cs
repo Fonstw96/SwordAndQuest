@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-<<<<<<< HEAD
 using System.Collections.Generic;
-=======
->>>>>>> origin/Fons
 
 public class BehaviourNpc : MonoBehaviour {
 
     Animator anim;
     public bool isWalking;
 
-<<<<<<< HEAD
     public float speed = 2f;
 
     public Transform path;
@@ -56,29 +52,14 @@ public class BehaviourNpc : MonoBehaviour {
 	void Update () {
 	    if (isWalking)
         {
-            MoveTowards();
-=======
-    void Start () {
-        anim = GetComponent<Animator>();
-    }
-	
-	
-	void Update () {
-	    if (isWalking)
-        {
->>>>>>> origin/Fons
             anim.SetBool("walk", true);
         } else if (!isWalking)
         {
             anim.SetBool("walk", false);
         }
-<<<<<<< HEAD
 
 	}
-
-=======
-	}
+	
 
 
->>>>>>> origin/Fons
 }

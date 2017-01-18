@@ -30,10 +30,7 @@ public class DialogueHolder : MonoBehaviour {
                     dialogueManager.currentLine = 0;
                     dialogueManager.ShowDialogue();
                     npc.GetComponent<BehaviourNpc>().isWalking = true;
-<<<<<<< HEAD
                     Debug.Log("iswaling true door DialogueHolder");
-=======
->>>>>>> origin/Fons
                 } 
 
 

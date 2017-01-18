@@ -11,16 +11,13 @@ public class EnemyAI : MonoBehaviour
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
      private int iAttackSequence = -1;
-    public int iMinAttackMilliseconds = 100;
-    public int iMaxAttackMilliseconds = 250;
-
-<<<<<<< HEAD
+    public int iMinAttackMilliseconds = 200;
+    public int iMaxAttackMilliseconds = 500;
+    
     public bool isdead = false;
-=======
->>>>>>> origin/Fons
     public bool dummy = false;
      private Animator anim;
-    public float fRunSpeed = 0.45f;
+    public float fRunSpeed = 0.15f;
 
     void Start()
     {
@@ -41,20 +38,17 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-<<<<<<< HEAD
         /* ====== DIE ====== */
         if (iLives <= 0)
         {
             isdead = true;
             anim.SetTrigger("Die");
             Destroy(GetComponent<Rigidbody>());
-            Destroy(GetComponent<Collider>());
+            Destroy(GetComponent<CapsuleCollider>());
+            Destroy(GetComponent<SphereCollider>());
         }
         /* ====== LIFE ====== */
-        else if (iLives > 0 && goTarget.GetComponent<Player>().levens > 0)
-=======
-        if (goTarget.GetComponent<Player>().levens > 0)
->>>>>>> origin/Fons
+        else if (goTarget.GetComponent<Player>().levens > 0)
         {
             fDistance = CalculateDistance(goTarget);
 
@@ -76,6 +70,8 @@ public class EnemyAI : MonoBehaviour
                     
                     if (!dummy)
                         goTarget.GetComponent<Player>().LifeLoss(1);
+                    else
+                        goTarget.GetComponent<Player>().LifeLoss(0);
 
                     fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
                     fLastAttack = Time.time;
@@ -139,6 +135,11 @@ public class EnemyAI : MonoBehaviour
             Destroy(GetComponent<EnemyAI>());
             // We laten het model en alles wel staan zodat je de enemy nog wel kan zien vallen en liggen
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+    	fLastAttack = Time.time - 1;
     }
 
     private void OnTriggerStay(Collider other)

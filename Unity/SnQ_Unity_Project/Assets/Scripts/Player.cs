@@ -4,63 +4,17 @@ using System;
 public class Player : MonoBehaviour
 {
     private GameObject goEnemy;
-<<<<<<< HEAD
-    private Collider cEnemy;
-    private Rigidbody rb;
-    private Animator anim;
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> master
-    protected float angle;
-    private float speed;
-    private float maxSpeed;
-
-
-
-    public float fSpeed = 0.45f;
-    protected float fDistance = 0;
-    public float fAttackRange = 2;
-    private float InputVt = 0;
-    private float InputV;
-
-    public int levens = 10;
-    private int attack;
-
-    bool walk;
-    bool run;
-
-<<<<<<< HEAD
-    protected bool bDead = false;
-=======
-    bool inAir = true;
-
-    public bool bDead = false;
->>>>>>> master
-    public bool sword = false;
-    public bool bAttack = false;
-    private bool versnel = false;
-    private bool isGrounded = true;
-
-    private int iInitialLives = 0;
-    private float fLastRegen = 0;
-    public float fRegenDelay = 3;
-
-    public int[] iInventory;
-=======
-    private Rigidbody rb;
+    // private Rigidbody rb;
     private Animator anim;
     
     protected float angle = 0;
-    private float maxSpeed = 0;
     
     public float fSpeed = 0.2f;
+    public float fMouseSensitivity = 1.2f;
     public float fAttackRange = 2;
-    private float fLastRegen = 0;
-    public float fRegenDelay = 5;
+     private float fInvincibility = 0;
 
-    public int levens = 5;
+    public int levens = 10;
     public int iInitialLives = 0;
     private int attack;
     private int falldelay = 0;
@@ -69,29 +23,24 @@ public class Player : MonoBehaviour
     bool run;
 
     //bool inAir = true;
->>>>>>> origin/Fons
 
-    protected bool bDead = false;
+    public bool bDead = false;
     public bool sword = false;
     public bool bAttack = false;
 
     public int[] iInventory;
 
-
     void Start()
     {
-        isGrounded = false;
+    	bDead = false;
+
         anim = GetComponent<Animator>();
-        goEnemy = GameObject.FindGameObjectWithTag("Enemy");
-        cEnemy = goEnemy.GetComponent<Collider>();
-        rb = GetComponent<Rigidbody>();
-        StartPos();
 
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         if (goEnemy == null)
             goEnemy = GameObject.FindGameObjectWithTag("Boss");
 
-        rb = GetComponent<Rigidbody>();
+        // rb = GetComponent<Rigidbody>();
 
         if (UIController.imInventory != null)
         {
@@ -116,7 +65,7 @@ public class Player : MonoBehaviour
 
         iInitialLives = levens;
     }
-
+    
     void Update()
     {
         if (!bDead)
@@ -128,237 +77,67 @@ public class Player : MonoBehaviour
             anim.SetBool("Run", run);
         }
         else
-<<<<<<< HEAD
             anim.SetTrigger("Die");
-
-        
-=======
-<<<<<<< HEAD
-        {
-            anim.SetInteger("Animation", 99);
-            transform.GetComponent<Respawn>().RespawnPlayer();
-        }
-=======
-            anim.SetTrigger("Die");
->>>>>>> origin/Fons
->>>>>>> master
     }
 
     void FixedUpdate()
     {
-<<<<<<< HEAD
         if (!bDead)
         {
-            float magnitude;
-            float fallspeed;
-=======
-<<<<<<< HEAD
-        float magnitude;
-        float InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
->>>>>>> master
+            float InputV = Input.GetKey(KeyCode.W) ? 1 : 0;
+            if (InputV == 0) InputV = Input.GetKey(KeyCode.S) ? -1 : 0;
+            if (InputV == 0) InputV = Input.GetAxis("Left Analog Vertical");
+            float InputH = Input.GetKey(KeyCode.D) ? 1 : 0;
+            if (InputH == 0) InputH = Input.GetKey(KeyCode.A) ? -1 : 0;
+            if (InputH == 0) InputH = Input.GetAxis("Left Analog Horizontal");
 
-            Vector3 movement = transform.forward * 10;
+            float TurnCamera = Input.GetAxis("Mouse X");
+            //if (TurnCamera == 0) TurnCamera = Input.GetAxis("Right Analog Horizontal");
 
-<<<<<<< HEAD
-            // handle speed and animations
-            if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
-            {
-                rb.AddForce(movement * 10);
-                run = true;
-                walk = false;
-                maxSpeed = 20;
-            }
-            else if (InputV > 0)
-            {
-                if (InputV > InputVt) versnel = true;
-                else if (InputV < InputVt) versnel = false;
-                rb.AddForce(movement * 5);
-                run = false;
-                walk = true;
-                maxSpeed = 10;
-            }
+            bool InputRun = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton7);
+
+            float walkspeed = fSpeed * InputV;
+
+            if (InputRun && InputV > 0)
+                walkspeed *= 1.5f;
             else if (InputV < 0)
-            {
-                rb.AddForce(movement * -5);
-                run = false;
-                walk = true;
-                maxSpeed = 10;
-            }
-=======
-        rb.useGravity = true;
+                walkspeed *= .75f;
 
-  
+            float xwalk = -Mathf.Sin(angle) * walkspeed;
+            float zwalk = Mathf.Cos(angle) * walkspeed;
+            Vector3 Walk = new Vector3(xwalk, 0, zwalk);
 
-        //rb.AddForce(gravity * -10);
-        //rb.AddForce(movement * 10);
-        // handle speed and animations
-        if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
-        {
-            rb.AddForce(movement * 10);
-            run = true;
-            walk = false;
-            maxSpeed = 20;
-        }
-        else if (InputV > 0)
-        {
+            float strafespeed = fSpeed * InputH;
+            float xstrafe = Mathf.Cos(angle) * strafespeed;
+            float zstrafe = Mathf.Sin(angle) * strafespeed;
+            Vector3 Strafe = new Vector3(xstrafe, 0, zstrafe);
 
-            rb.AddForce(movement * 5);
-            run = false;
-            walk = true;
-            maxSpeed = 10;
-        }
-        else if (InputV < 0)
-        {
-            rb.AddForce(movement * -5);
-            run = false;
-            walk = true;
-            maxSpeed = 10;
-        }
-        else if ( InputV == 0)
-        {
-            rb.velocity = rb.velocity * 0.5f;
-            run = false;
-            walk = false;
->>>>>>> master
+            Vector3 Here = transform.position;
+            Here.y += 1;
             
-
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-            {
-                magnitude = rb.velocity.magnitude;
-                rb.velocity = Vector3.zero;
-                rb.velocity = transform.forward * magnitude * speed * 0.5f;
-            }
-
-            if (rb.velocity.magnitude > maxSpeed)
-            {
-                rb.velocity = rb.velocity.normalized * maxSpeed;
-            }
-
-            InputVt = InputV;
-
-<<<<<<< HEAD
-            //gravity
-            fallspeed = 0;
-
-            Vector3 gravity = new Vector3(0.0f, 9.81f, 0.0f) * -1;
-
-
-            if (isGrounded == false)
-                fallspeed += 50;
-            else if (isGrounded == true)
-            {
-                fallspeed = 0;
-
-            }
-                
-
-
-            Vector3 downforce = gravity * fallspeed;
-
-            rb.AddForce(downforce, ForceMode.Acceleration);
-=======
-        if (inAir == true)
-        {
-            if (falldelay == 0) ;
-            //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
-
->>>>>>> master
-        }
-        
-        
-    }
-
-    void HandleMovement()
-    {
-        InputV = Input.GetAxis("Vertical");     // W / S / Up / Down / Left_Analog_Stick_Up / Left_Analog_Stick_Down
-        float InputH = Input.GetAxis("Horizontal");   // D / A / Right / Left / Left_Analog_Stick_Right / Left_Analog_Stick_Left
-        
-
-        // forward/backward
-        if (InputV < 1 && versnel == false)
-        {
-            //rb.velocity = rb.velocity * 0.5f;
-            rb.velocity = Vector3.zero;
-            run = false;
-            walk = false;
-
-        }
-        //getting handled in fixed update
-
-        // left/right
-        angle = 4 * InputH;
-        transform.Rotate(0, angle, 0);
-
-        anim.SetBool("Walk", walk);
-        anim.SetBool("Run", run);
-
-        //handle gravity with fixed update
-
-
-
-=======
-        if (!bDead)
-        {
-            float magnitude;
-            float InputV = Input.GetAxis("Vertical");
-            float InputH = Input.GetAxis("Horizontal");
-
-            bool InputRun = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton5);
-
-            Vector3 movement = transform.forward * 100.0f * fSpeed;
-            float speed = fSpeed;
-            //Vector3 gravity = new Vector3(0, 35, 0);
-
-
-            //rb.AddForce(gravity * -10);
-            //rb.AddForce(movement * 10);
-            // handle speed and animations
+            if (!Physics.Raycast(Here, Walk, walkspeed))
+                transform.Translate(Walk);
+            if (!Physics.Raycast(Here, Strafe, strafespeed))
+                transform.Translate(Strafe);
 
             if (InputRun && InputV > 0)
             {
-                rb.AddForce(movement * 1.5f);
-                speed *= 1.5f;
                 run = true;
                 walk = false;
-                maxSpeed = 20;
             }
-            else if (InputV != 0)
+            else if (InputV != 0 || InputH != 0)
             {
-                if (InputV > 0)
-                    rb.AddForce(movement);
-                else
-                    rb.AddForce(-movement);
                 run = false;
                 walk = true;
-                maxSpeed = 10;
             }
             else
             {
-                rb.velocity = Vector3.zero;
                 run = false;
                 walk = false;
             }
 
-            if (InputH != 0)
-            {
-                //magnitude = rb.velocity.magnitude;
-                //rb.velocity = Vector3.zero;
-                //rb.velocity = transform.forward * magnitude * speed * 0.5f;
-
-                angle = 4 * InputH;
-                transform.Rotate(0, angle, 0);
-            }
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-            {
-                magnitude = rb.velocity.magnitude;
-                rb.velocity = Vector3.zero;
-                rb.velocity = transform.forward * magnitude * speed * 0.5f;
-            }
-
-            if (rb.velocity.magnitude > maxSpeed)
-            {
-                rb.velocity = rb.velocity.normalized * maxSpeed;
-            }
+            if (TurnCamera != 0)
+                transform.Rotate(0, TurnCamera * fMouseSensitivity, 0);
 
             falldelay--;
             if (falldelay <= 0) falldelay = 0;
@@ -370,28 +149,12 @@ public class Player : MonoBehaviour
             //    Debug.Log("test");
             //}
         }
->>>>>>> origin/Fons
     }
 
     private void HandleCombat()
     {
         if (levens <= 0)
             bDead = true;
-<<<<<<< HEAD
-        else if (sword == true)
-=======
-<<<<<<< HEAD
-        else if(sword == true)
->>>>>>> master
-        {
-            bool LMB = Input.GetMouseButtonDown(0);
-            bool RMB = Input.GetMouseButtonDown(1);
-
-            if (LMB)
-            {
-                bAttack = true;
-                if (attack == 3)
-=======
         else if (sword == true)
         {
             bAttack = Input.GetButtonDown("Fire1");
@@ -399,7 +162,6 @@ public class Player : MonoBehaviour
             if (bAttack)
             {
                 if (attack >= 3)
->>>>>>> origin/Fons
                 {
                     anim.SetTrigger("Attack 2");
                     attack = 1;
@@ -412,13 +174,7 @@ public class Player : MonoBehaviour
             }
         }
 
-
-        if (levens < iInitialLives && Time.time - fLastRegen > fRegenDelay)
-        {
-            fLastRegen = Time.time;
-            levens++;
-        }
-        else if (Input.GetKeyDown(KeyCode.F) && levens < iInitialLives)
+        if (Input.GetKeyDown(KeyCode.F) && levens < iInitialLives)
         {
             int index = Array.IndexOf(iInventory, 1);
 
@@ -444,89 +200,25 @@ public class Player : MonoBehaviour
 
     public void LifeLoss(int iDamage)
     {
-<<<<<<< HEAD
-        if (!goEnemy.GetComponent<EnemyAI>().dummy)
-=======
-<<<<<<< HEAD
-        if(!goEnemy.GetComponent<EnemyAI>().dummy)
->>>>>>> master
-            levens--;
-=======
-        levens -= iDamage;
->>>>>>> origin/Fons
-
-        if (levens <= 0)
-            bDead = true;
-        else
-            anim.SetTrigger("Hit");
-
-        fLastRegen = Time.time;
-    }
-
-<<<<<<< HEAD
-    void OnCollisionEnter(Collision _Collision)
-=======
-<<<<<<< HEAD
-    private void OnCollisionEnter(Collision other)
->>>>>>> master
-    {
-        if (_Collision.gameObject.tag == "Terrain")
+        if (Time.time - fInvincibility > .5f)
         {
-            isGrounded = true;
-        }
-        if (_Collision.gameObject.tag == "Cave")
-        {
-            isGrounded = true;
+            levens -= iDamage;
+
+            if (levens <= 0)
+                bDead = true;
+            else
+                anim.SetTrigger("Hit");
+
+            fInvincibility = Time.time;
         }
     }
-=======
-    //private void OnCollisionEnter(Collision other)
-    //{
-    //    if (other.gameObject.name == "Terrain")
-    //    {
-    //        inAir = false;
-    //    }
-    //}
->>>>>>> origin/Fons
 
-    //consider when character is jumping .. it will exit collision.
-    void OnCollisionExit(Collision _Collision)
+    private void OnCollisionExit(Collision other)
     {
-        if (_Collision.gameObject.tag == "Terrain")
+        if (other.gameObject.name == "Terrain")
         {
-            isGrounded = false;
-        }
-        if (_Collision.gameObject.tag == "Cave")
-        {
-<<<<<<< HEAD
-            isGrounded = false;
-=======
-<<<<<<< HEAD
-            inAir = true;
-=======
             //inAir = true;
->>>>>>> origin/Fons
             falldelay = 10;
->>>>>>> master
         }
-    }
-
-    private void StartPos()
-    {
-        
-        int startpos = 0;
-        startpos = PlayerPrefs.GetInt("startposision");
-        if (startpos == 0) transform.position = new Vector3(194.0727f, 3.317121f, 412.2244f);// spawn start
-        if (startpos == 1) transform.position = new Vector3(458.9476f,0.3f, 46.84577f);//naar overworld van tutorial level
-        if (startpos == 2) transform.position = new Vector3(73,0.01413554f,51);//naar tutorial level
-        if (startpos == 3) transform.position = new Vector3(0, 0, 5);//naar temple
-        if (startpos == 4) transform.position = new Vector3(109,0.5f,102.6);//naar overworld van temple
-        if (startpos == 5) transform.position = new Vector3(95, 0.31f, 321);//naar forest
-        if (startpos == 6) transform.position = new Vector3(431.2f,0.5f,957.4f);//naar overworld van forest
-        if (startpos == 7) transform.position = new Vector3(5, 0, 255);//naar maze
-        if (startpos == 8) transform.position = new Vector3(164.9f,0.5f,863.7f);//naar overworld van maze
-
-
-        Debug.Log(startpos);
     }
 }
