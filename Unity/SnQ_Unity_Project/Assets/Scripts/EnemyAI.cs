@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
      private float fAttackDelay = 0.75f;
      private int iAttackSequence = -1;
     public int iMinAttackMilliseconds = 200;
-    public int iMaxAttackMilliseconds = 500;
+    public int iMaxAttackMilliseconds = 300;
     
     public bool isdead = false;
     public bool dummy = false;
@@ -31,7 +31,6 @@ public class EnemyAI : MonoBehaviour
         fAttackDelay = Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
         
         anim = GetComponent<Animator>();
-        //controller = GetComponent<CharacterController>();
 
         fDistance = CalculateDistance(goTarget);
 	}
@@ -139,12 +138,13 @@ public class EnemyAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-    	fLastAttack = Time.time - 1;
+        if (Time.time - fLastAttack > iMaxAttackMilliseconds)
+    	    fLastAttack = Time.time + 1;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().bAttack && Vector3.Angle(other.transform.forward, transform.position - other.transform.position) < 15)
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().bAttack && Vector3.Angle(other.transform.forward, transform.position - other.transform.position) < 30)
             LifeLoss();
     }
 }

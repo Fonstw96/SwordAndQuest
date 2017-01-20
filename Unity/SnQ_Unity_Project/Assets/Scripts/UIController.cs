@@ -24,15 +24,15 @@ public class UIController : MonoBehaviour
         Debug.Log(imInventory.Length + " inventory positions found.");
         Debug.Log(t2ItemIcons.Length + " item icons found.");
 
+        goStages = GameObject.FindGameObjectWithTag("Boss lives");
         if (GameObject.FindGameObjectWithTag("Boss") != null)
         {
-            goStages = GameObject.FindGameObjectWithTag("Boss lives");
-            goStages.SetActive(true);
             goBoss = GameObject.FindGameObjectWithTag("Boss");
             cBoss = goBoss.GetComponent<BossAI>();
 
             bBoss = true;
         }
+        goStages.SetActive(bBoss);
     }
 	
 	void Update ()

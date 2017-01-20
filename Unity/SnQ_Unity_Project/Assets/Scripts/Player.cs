@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     protected float angle = 0;
     
     public float fSpeed = 0.2f;
-    public float fMouseSensitivity = 1.2f;
     public float fAttackRange = 2;
      private float fInvincibility = 0;
 
@@ -27,6 +26,7 @@ public class Player : MonoBehaviour
     public bool bDead = false;
     public bool sword = false;
     public bool bAttack = false;
+    public bool bUse = false;
 
     public int[] iInventory;
 
@@ -72,6 +72,12 @@ public class Player : MonoBehaviour
         {
             HandleCombat();
 
+            float TurnCamera = Input.GetAxis("MouseH");
+            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
+
+            if (TurnCamera != 0)
+                transform.Rotate(0, TurnCamera, 0);
+
             // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
             anim.SetBool("Walk", walk);
             anim.SetBool("Run", run);
@@ -86,15 +92,12 @@ public class Player : MonoBehaviour
         {
             float InputV = Input.GetKey(KeyCode.W) ? 1 : 0;
             if (InputV == 0) InputV = Input.GetKey(KeyCode.S) ? -1 : 0;
-            if (InputV == 0) InputV = Input.GetAxis("Left Analog Vertical");
+            if (InputV == 0) InputV = Input.GetAxis("LeftV");
             float InputH = Input.GetKey(KeyCode.D) ? 1 : 0;
             if (InputH == 0) InputH = Input.GetKey(KeyCode.A) ? -1 : 0;
-            if (InputH == 0) InputH = Input.GetAxis("Left Analog Horizontal");
+            if (InputH == 0) InputH = Input.GetAxis("LeftH");
 
-            float TurnCamera = Input.GetAxis("Mouse X");
-            //if (TurnCamera == 0) TurnCamera = Input.GetAxis("Right Analog Horizontal");
-
-            bool InputRun = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton7);
+            bool InputRun = Input.GetButton("Sprint") || Input.GetAxis("RightTrig") > .5f;
 
             float walkspeed = fSpeed * InputV;
 
@@ -114,10 +117,10 @@ public class Player : MonoBehaviour
 
             Vector3 Here = transform.position;
             Here.y += 1;
-            
-            if (!Physics.Raycast(Here, Walk, walkspeed))
+
+            //if (!Physics.Raycast(Here, Walk, walkspeed))
                 transform.Translate(Walk);
-            if (!Physics.Raycast(Here, Strafe, strafespeed))
+            //if (!Physics.Raycast(Here, Strafe, strafespeed))
                 transform.Translate(Strafe);
 
             if (InputRun && InputV > 0)
@@ -136,18 +139,10 @@ public class Player : MonoBehaviour
                 walk = false;
             }
 
-            if (TurnCamera != 0)
-                transform.Rotate(0, TurnCamera * fMouseSensitivity, 0);
-
             falldelay--;
             if (falldelay <= 0) falldelay = 0;
 
-            //if (inAir == true)
-            //{
-            //    if(falldelay == 0)
-            //    //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
-            //    Debug.Log("test");
-            //}
+            bUse = Input.GetButtonDown("Use");
         }
     }
 
@@ -157,7 +152,7 @@ public class Player : MonoBehaviour
             bDead = true;
         else if (sword == true)
         {
-            bAttack = Input.GetButtonDown("Fire1");
+            bAttack = Input.GetButtonDown("Attack");
 
             if (bAttack)
             {
@@ -174,7 +169,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && levens < iInitialLives)
+        if (Input.GetButtonDown("Potion") && levens < iInitialLives)
         {
             int index = Array.IndexOf(iInventory, 1);
 

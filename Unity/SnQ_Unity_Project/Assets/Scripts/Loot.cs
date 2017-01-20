@@ -4,10 +4,21 @@ using System;
 public class Loot : MonoBehaviour
 {
     public int iItem = 0;
+    public GameObject goLid = null;
+    private int iSteps = 0;
+
+    private void FixedUpdate()
+    {
+        if (iItem == 0 && goLid != null && iSteps < 60)
+        {
+            goLid.transform.Rotate(-.2f, 0, 0);
+            iSteps++;
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && other.GetComponent<Player>().bAttack && Vector3.Angle(other.transform.forward, transform.position - other.transform.position) < 25 && iItem != 0)
+        if (other.gameObject.tag == "Player" && other.GetComponent<Player>().bUse && Vector3.Angle(other.transform.forward, transform.position - other.transform.position) < 100 && iItem != 0)
         {
             int index = Array.IndexOf(other.GetComponent<Player>().iInventory, 0);
 
@@ -16,29 +27,26 @@ public class Loot : MonoBehaviour
                 switch (iItem)
                 {
                     case (1):
-                        Debug.Log("You found a Health Potion!");
+                        print("You found a Health Potion!");
                         break;
                     case (2):
-                        Debug.Log("You found Mythril Planks for your boat's bow!");
+                        print("You found Mythril Planks for your boat's bow!");
                         break;
                     case (3):
-                        Debug.Log("You found a roll of cloth for your boat's sail!");
+                        print("You found a roll of cloth for your boat's sail!");
                         break;
                     case (4):
-                        Debug.Log("You found a bag of tools to repair your boat with!");
+                        print("You found a bag of tools to repair your boat with!");
                         break;
                     default:
-                        Debug.Log("You found something! What could it be?");
+                        print("You found something! What could it be?");
                         break;
                 }
                 other.GetComponent<Player>().iInventory[index] = iItem;
                 iItem = 0;
             }
             else
-            {
-                Debug.Log("Inventory is already full.");
-                // dialogue inv full
-            }
+                print("Inventory is already full.");
         }
     }
 }

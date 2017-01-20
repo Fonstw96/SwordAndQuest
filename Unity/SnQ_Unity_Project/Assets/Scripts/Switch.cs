@@ -13,24 +13,27 @@ public class Switch : MonoBehaviour
         aAction = GetComponent<Animation>();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {       
+    private void OnTriggerStay(Collider other)
+    {
         if (!bSwitched && other.gameObject.tag == "Player")
         {
-            if (aAction != null)
+            if (other.GetComponent<Player>().bUse)
             {
-                aAction.Play();
-            }
+                if (aAction != null)
+                {
+                    aAction.Play();
+                }
 
-            bSwitched = true;
+                bSwitched = true;
 
-            if (goTarget.Length > 0)
-            {
-                foreach (GameObject switchable in goTarget)
-                    switchable.transform.position = new Vector3(switchable.transform.position.x, -fDownwards, switchable.transform.position.z);
+                if (goTarget.Length > 0)
+                {
+                    foreach (GameObject switchable in goTarget)
+                        switchable.transform.position = new Vector3(switchable.transform.position.x, -fDownwards, switchable.transform.position.z);
+                }
+                else
+                    Debug.Log("No target set");
             }
-            else
-                Debug.Log("No target set");
         }
     }
 }
