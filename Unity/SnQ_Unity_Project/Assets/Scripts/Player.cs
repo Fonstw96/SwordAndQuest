@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private float speed;
     private float maxSpeed;
 
-
+    bool disable = false;
 
     public float fSpeed = 0.45f;
     protected float fDistance = 0;
@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
     bool walk;
     bool run;
+
+    public int startpos;
 
 
     public bool bDead = false;
@@ -89,8 +91,12 @@ public class Player : MonoBehaviour
         if (!bDead)
         {
             HandleCombat();
-            HandleMovement();
+            //HandleMovement();
+            float TurnCamera = Input.GetAxis("MouseH");
+            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
 
+            if (TurnCamera != 0)
+                transform.Rotate(0, TurnCamera, 0);
             // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
             anim.SetBool("Walk", walk);
             anim.SetBool("Run", run);
@@ -107,115 +113,44 @@ public class Player : MonoBehaviour
     {
         if (!bDead)
         {
-            float magnitude;
-            float fallspeed;
+            float InputV = Input.GetKey(KeyCode.W) ? 1 : 0;
+            if (InputV == 0) InputV = Input.GetKey(KeyCode.S) ? -1 : 0;
+            if (InputV == 0) InputV = Input.GetAxis("Vertical");
+            float InputH = Input.GetKey(KeyCode.D) ? 1 : 0;
+            if (InputH == 0) InputH = Input.GetKey(KeyCode.A) ? -1 : 0;
+            if (InputH == 0) InputH = Input.GetAxis("Horizontal");
 
+            bool InputRun = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton7);
 
-            Vector3 movement = transform.forward * 10;
+            float AnglePi = angle * Mathf.PI / 180;
+            float speed = fSpeed * InputV;
+            if (InputRun)
+                speed *= 1.5f;
+            // Sin en Cos omdraaien voor strafe
+            float xspeed = Mathf.Sin(AnglePi) * speed;
+            float zspeed = Mathf.Cos(AnglePi) * speed;
+            Vector3 Movement = new Vector3(xspeed, 0, zspeed);
 
-            // handle speed and animations
-            if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
+            if (InputRun && InputV > 0)
             {
-                rb.AddForce(movement * 10);
+                if (!Physics.Raycast(transform.position, transform.forward, speed))
+                    transform.Translate(Movement);
                 run = true;
                 walk = false;
-                maxSpeed = 20;
             }
-            else if (InputV > 0)
+            else if (InputV != 0)
             {
-                if (InputV > InputVt) versnel = true;
-                else if (InputV < InputVt) versnel = false;
-                rb.AddForce(movement * 5);
+                if (!Physics.Raycast(transform.position, transform.forward, speed))
+                    transform.Translate(Movement);
+
                 run = false;
                 walk = true;
-                maxSpeed = 10;
-            }
-            else if (InputV < 0)
-            {
-                rb.AddForce(movement * -5);
-                run = false;
-                walk = true;
-                maxSpeed = 10;
             }
 
-            rb.useGravity = true;
-
-
-
-            //rb.AddForce(gravity * -10);
-            //rb.AddForce(movement * 10);
-            // handle speed and animations
-            if (Input.GetKey(KeyCode.LeftShift) && InputV > 0)
+            if (InputH != 0)
             {
-                rb.AddForce(movement * 10);
-                run = true;
-                walk = false;
-                maxSpeed = 20;
-            }
-            else if (InputV > 0)
-            {
-
-                rb.AddForce(movement * 5);
-                run = false;
-                walk = true;
-                maxSpeed = 10;
-            }
-            else if (InputV < 0)
-            {
-                rb.AddForce(movement * -5);
-                run = false;
-                walk = true;
-                maxSpeed = 10;
-            }
-            else if (InputV == 0)
-            {
-                rb.velocity = rb.velocity * 0.5f;
-                run = false;
-                walk = false;
-
-
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-                {
-                    magnitude = rb.velocity.magnitude;
-                    rb.velocity = Vector3.zero;
-                    rb.velocity = transform.forward * magnitude * speed * 0.5f;
-                }
-
-                if (rb.velocity.magnitude > maxSpeed)
-                {
-                    rb.velocity = rb.velocity.normalized * maxSpeed;
-                }
-
-                InputVt = InputV;
-
-                //gravity
-                fallspeed = 0;
-
-                Vector3 gravity = new Vector3(0.0f, 9.81f, 0.0f) * -1;
-
-
-                if (isGrounded == false)
-                    fallspeed += 50;
-                else if (isGrounded == true)
-                {
-                    fallspeed = 0;
-
-                }
-                Debug.Log(isGrounded);
-
-
-                Vector3 downforce = gravity * fallspeed;
-
-                rb.AddForce(downforce, ForceMode.Acceleration);
-
-                if (inAir == true)
-                {
-                    //if (falldelay == 0)
-                    //GetComponent<Rigidbody>().AddForce(Physics.gravity * 20, ForceMode.Acceleration);
-
-                }
-
-
+                angle = 4 * InputH;
+                transform.Rotate(0, angle, 0);
             }
         }
     }
@@ -373,6 +308,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision _Collision)
     {
+
         if (_Collision.gameObject.tag == "Terrain")
         {
             isGrounded = true;
@@ -386,16 +322,17 @@ public class Player : MonoBehaviour
     //consider when character is jumping .. it will exit collision.
     void OnCollisionExit(Collision _Collision)
     {
-        if (_Collision.gameObject.tag == "Terrain")
-        {
-            isGrounded = false;
-        }
+            if (_Collision.gameObject.tag == "Terrain")
+            {
+                isGrounded = false;
+            }
     }
 
     private void StartPos()
     {
         
-        int startpos = 0;
+        //startpos = 1;
+        if (startpos == 0)
         startpos = PlayerPrefs.GetInt("startposision");
         if (startpos == 0) transform.position = new Vector3(194.0727f, 3.317121f, 412.2244f);// spawn start
         if (startpos == 1) transform.position = new Vector3(458.9476f,0.3f, 46.84577f);//naar overworld van tutorial level
