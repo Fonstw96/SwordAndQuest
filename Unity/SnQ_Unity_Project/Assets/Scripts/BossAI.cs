@@ -16,6 +16,7 @@ public class BossAI : MonoBehaviour
     public int iMaxAttackMilliseconds = 250;
     public GameObject Minion = null;
 
+    public AudioClip sndBackGroundMusic = null;
 
      private Animator anim = null;
     public float fRunSpeed = 0.45f;
@@ -53,9 +54,11 @@ public class BossAI : MonoBehaviour
     {
         if (other.tag == "Player" && iLives == 0)
         {
-            //Debug.Log("The Boss is waking...");
+            //print("The Boss is waking...");
             anim.SetTrigger("Spawn");
             fSpawnDelay = Time.time + 2;
+
+            /* ====== PLAY AUDIO U BAKA ====== */
 
             // Weg met de trigger-collider voor performance en om aanval-bugs te voorkomen (zodat dit niet blijft aanroepen)
             Destroy(GetComponent<BoxCollider>());
@@ -67,7 +70,7 @@ public class BossAI : MonoBehaviour
         if (fSpawnDelay > 0 && fSpawnDelay - Time.time <= 0)
         {
             iLives = 3;
-            //Debug.Log("The Boss has awoken!");
+            //print("The Boss has awoken!");
             fSpawnDelay = 0;
         }
     }

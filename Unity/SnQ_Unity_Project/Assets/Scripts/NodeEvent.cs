@@ -58,19 +58,19 @@ public class NodeEvent : MonoBehaviour {
 
         if (currentnode == 4 && nodeEventStarted)
         {
-            if (enemyPrefab1.gameObject.GetComponent<EnemyAI>().isdead == true && enemyPrefab2.gameObject.GetComponent<EnemyAI>().isdead == true && enemyPrefab3.gameObject.GetComponent<EnemyAI>().isdead == true)
+            if (enemyPrefab1.gameObject.GetComponent<EnemyAI>() == null && enemyPrefab2.gameObject.GetComponent<EnemyAI>() == null && enemyPrefab3.gameObject.GetComponent<EnemyAI>() == null)
             {
                 nodeEventComplete = true;
             }
         } else if (currentnode == 7 && nodeEventStarted)
         {
-            if (enemyPrefab1.gameObject.GetComponent<EnemyAI>().isdead == true && enemyPrefab2.gameObject.GetComponent<EnemyAI>().isdead == true && enemyPrefab3.gameObject.GetComponent<EnemyAI>().isdead == true)
+            if (enemyPrefab1.gameObject.GetComponent<EnemyAI>() == null && enemyPrefab2.gameObject.GetComponent<EnemyAI>() == null && enemyPrefab3.gameObject.GetComponent<EnemyAI>() == null)
             {
                 nodeEventComplete = true;
             }
         } else if (currentnode == 10 && nodeEventStarted)
         {
-            if (enemyPrefab1.gameObject.GetComponent<EnemyAI>().isdead == true && enemyPrefab2.gameObject.GetComponent<EnemyAI>().isdead == true && enemyPrefab3.gameObject.GetComponent<EnemyAI>().isdead == true)
+            if (enemyPrefab1.gameObject.GetComponent<EnemyAI>() == null && enemyPrefab2.gameObject.GetComponent<EnemyAI>() == null && enemyPrefab3.gameObject.GetComponent<EnemyAI>() == null)
             {
                 nodeEventComplete = true;
             }

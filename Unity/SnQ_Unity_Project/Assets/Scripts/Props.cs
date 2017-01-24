@@ -5,14 +5,18 @@ public class Props : MonoBehaviour
 {
     public Mesh[] mPossibleSpawns;
     public bool[] bSpinnableAxis = { true, true, true };
+    public bool bNeedsCollider = true;
 
 	void Start ()
     {
         if (mPossibleSpawns.Length > 0)
             GetComponent<MeshFilter>().mesh = mPossibleSpawns[Random.Range(0, mPossibleSpawns.Length)];
 
-        gameObject.AddComponent<MeshCollider>();
-        GetComponent<MeshCollider>().convex = true;
+        if (bNeedsCollider)
+        {
+            gameObject.AddComponent<MeshCollider>();
+            GetComponent<MeshCollider>().convex = true;
+        }
 
         int[] axis = { 0, 0, 0 };
         for (int s=0; s<3; s++)

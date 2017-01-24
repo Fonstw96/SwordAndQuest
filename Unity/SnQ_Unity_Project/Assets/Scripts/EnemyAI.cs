@@ -8,13 +8,13 @@ public class EnemyAI : MonoBehaviour
      protected float fDistance = 0;
     public float fAttackRange = 2;
     public float fPerceptionRange = 15;
+    public AudioClip sndAttack = null;
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
      private int iAttackSequence = -1;
     public int iMinAttackMilliseconds = 200;
     public int iMaxAttackMilliseconds = 300;
     
-    public bool isdead = false;
     public bool dummy = false;
      private Animator anim;
     public float fRunSpeed = 0.15f;
@@ -40,11 +40,9 @@ public class EnemyAI : MonoBehaviour
         /* ====== DIE ====== */
         if (iLives <= 0)
         {
-            isdead = true;
             anim.SetTrigger("Die");
             Destroy(GetComponent<Rigidbody>());
             Destroy(GetComponent<CapsuleCollider>());
-            Destroy(GetComponent<SphereCollider>());
         }
         /* ====== LIFE ====== */
         else if (goTarget.GetComponent<Player>().levens > 0)
@@ -58,6 +56,9 @@ public class EnemyAI : MonoBehaviour
 
                 if (Time.time - fLastAttack > fAttackDelay)
                 {
+                    if (sndAttack != null)
+                        AudioSource.PlayClipAtPoint(sndAttack, transform.position);
+
                     iAttackSequence++;
                     if (iAttackSequence == 1)
                         anim.SetTrigger("Attack2");
@@ -91,10 +92,7 @@ public class EnemyAI : MonoBehaviour
             }
             /* ====== IDLE ====== */
             else
-            {
                 anim.SetBool("Run", false);
-                //anim.SetBool("Walk", false);
-            }
         }
     }
 

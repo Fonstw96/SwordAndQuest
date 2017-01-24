@@ -5,8 +5,9 @@ public class Switch : MonoBehaviour
 {
     public GameObject[] goTarget;
      private bool bSwitched = false;
+    public AudioClip sndClick = null;
      private Animation aAction;
-    public float fDownwards = 0;
+    public float fHeight = 0;
 
     private void Start()
     {
@@ -19,20 +20,23 @@ public class Switch : MonoBehaviour
         {
             if (other.GetComponent<Player>().bUse)
             {
+                if (sndClick != null)
+                    AudioSource.PlayClipAtPoint(sndClick, transform.position);
                 if (aAction != null)
-                {
                     aAction.Play();
-                }
 
                 bSwitched = true;
 
                 if (goTarget.Length > 0)
                 {
                     foreach (GameObject switchable in goTarget)
-                        switchable.transform.position = new Vector3(switchable.transform.position.x, -fDownwards, switchable.transform.position.z);
+                    {
+                        Vector3 pos = switchable.transform.position;
+                        switchable.transform.position = new Vector3(pos.x, fHeight, pos.z);
+                    }
                 }
                 else
-                    Debug.Log("No target set");
+                    print("No target set");
             }
         }
     }

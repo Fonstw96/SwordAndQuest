@@ -4,14 +4,18 @@ using System;
 public class Player : MonoBehaviour
 {
     private GameObject goEnemy;
-    // private Rigidbody rb;
+    //private Rigidbody rb;
     private Animator anim;
-    
+    public AudioClip Attack1 = null;
+    public AudioClip Attack2 = null;
+
     protected float angle = 0;
     
     public float fSpeed = 0.2f;
     public float fAttackRange = 2;
      private float fInvincibility = 0;
+    private float fInputV = 0;
+    private float fInputH = 0;
 
     public int levens = 10;
     public int iInitialLives = 0;
@@ -20,6 +24,7 @@ public class Player : MonoBehaviour
 
     bool walk;
     bool run;
+    private bool bInputRun = false;
 
     //bool inAir = true;
 
@@ -40,7 +45,7 @@ public class Player : MonoBehaviour
         if (goEnemy == null)
             goEnemy = GameObject.FindGameObjectWithTag("Boss");
 
-        // rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
 
         if (UIController.imInventory != null)
         {
@@ -72,15 +77,16 @@ public class Player : MonoBehaviour
         {
             HandleCombat();
 
-            float TurnCamera = Input.GetAxis("MouseH");
-            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
+            fInputV = Input.GetKey(KeyCode.W) ? 1 : 0;
+            if (fInputV == 0) fInputV = Input.GetKey(KeyCode.S) ? -1 : 0;
+            if (fInputV == 0) fInputV = Input.GetAxis("LeftV");
+            fInputH = Input.GetKey(KeyCode.D) ? 1 : 0;
+            if (fInputH == 0) fInputH = Input.GetKey(KeyCode.A) ? -1 : 0;
+            if (fInputH == 0) fInputH = Input.GetAxis("LeftH");
 
-            if (TurnCamera != 0)
-                transform.Rotate(0, TurnCamera, 0);
+            bInputRun = Input.GetButton("Sprint") || Input.GetAxis("RightTrig") > .5f;
 
-            // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
-            anim.SetBool("Walk", walk);
-            anim.SetBool("Run", run);
+            HandleAnimation();
         }
         else
             anim.SetTrigger("Die");
@@ -90,57 +96,7 @@ public class Player : MonoBehaviour
     {
         if (!bDead)
         {
-            float InputV = Input.GetKey(KeyCode.W) ? 1 : 0;
-            if (InputV == 0) InputV = Input.GetKey(KeyCode.S) ? -1 : 0;
-            if (InputV == 0) InputV = Input.GetAxis("LeftV");
-            float InputH = Input.GetKey(KeyCode.D) ? 1 : 0;
-            if (InputH == 0) InputH = Input.GetKey(KeyCode.A) ? -1 : 0;
-            if (InputH == 0) InputH = Input.GetAxis("LeftH");
-
-            bool InputRun = Input.GetButton("Sprint") || Input.GetAxis("RightTrig") > .5f;
-
-            float walkspeed = fSpeed * InputV;
-
-            if (InputRun && InputV > 0)
-                walkspeed *= 1.5f;
-            else if (InputV < 0)
-                walkspeed *= .75f;
-
-            float xwalk = -Mathf.Sin(angle) * walkspeed;
-            float zwalk = Mathf.Cos(angle) * walkspeed;
-            Vector3 Walk = new Vector3(xwalk, 0, zwalk);
-
-            float strafespeed = fSpeed * InputH;
-            float xstrafe = Mathf.Cos(angle) * strafespeed;
-            float zstrafe = Mathf.Sin(angle) * strafespeed;
-            Vector3 Strafe = new Vector3(xstrafe, 0, zstrafe);
-
-            Vector3 Here = transform.position;
-            Here.y += 1;
-
-            //if (!Physics.Raycast(Here, Walk, walkspeed))
-                transform.Translate(Walk);
-            //if (!Physics.Raycast(Here, Strafe, strafespeed))
-                transform.Translate(Strafe);
-
-            if (InputRun && InputV > 0)
-            {
-                run = true;
-                walk = false;
-            }
-            else if (InputV != 0 || InputH != 0)
-            {
-                run = false;
-                walk = true;
-            }
-            else
-            {
-                run = false;
-                walk = false;
-            }
-
-            falldelay--;
-            if (falldelay <= 0) falldelay = 0;
+            HandleMovement();
 
             bUse = Input.GetButtonDown("Use");
         }
@@ -150,26 +106,7 @@ public class Player : MonoBehaviour
     {
         if (levens <= 0)
             bDead = true;
-        else if (sword == true)
-        {
-            bAttack = Input.GetButtonDown("Attack");
-
-            if (bAttack)
-            {
-                if (attack >= 3)
-                {
-                    anim.SetTrigger("Attack 2");
-                    attack = 1;
-                }
-                else
-                {
-                    anim.SetTrigger("Attack1");
-                    attack++;
-                }
-            }
-        }
-
-        if (Input.GetButtonDown("Potion") && levens < iInitialLives)
+        else if (Input.GetButtonDown("Potion") && levens < iInitialLives)
         {
             int index = Array.IndexOf(iInventory, 1);
 
@@ -179,6 +116,108 @@ public class Player : MonoBehaviour
                 levens = iInitialLives;
             }
         }
+        else if (sword == true)
+        {
+            bAttack = Input.GetButtonDown("Attack");
+
+            if (bAttack)
+            {
+                if (attack >= 3)
+                {
+                    anim.SetTrigger("Attack 2");
+
+                    if (Attack2 != null)
+                        AudioSource.PlayClipAtPoint(Attack2, transform.position, .5f);
+                    attack = 1;
+                }
+                else
+                {
+                    anim.SetTrigger("Attack1");
+
+                    if (Attack1 != null)
+                        AudioSource.PlayClipAtPoint(Attack1, transform.position);
+                    attack++;
+                }
+            }
+        }
+    }
+
+    private void HandleMovement()
+    {
+        float walkspeed = fSpeed * fInputV;
+
+        if (bInputRun && fInputV > 0)
+            walkspeed *= 1.5f;
+        else if (fInputV < 0)
+            walkspeed *= .75f;
+
+        float xwalk = -Mathf.Sin(angle) * walkspeed;
+        float zwalk = Mathf.Cos(angle) * walkspeed;
+        Vector3 Walk = new Vector3(xwalk, 0, zwalk);
+
+        float strafespeed = fSpeed * fInputH;
+        float xstrafe = Mathf.Cos(angle) * strafespeed;
+        float zstrafe = Mathf.Sin(angle) * strafespeed;
+        Vector3 Strafe = new Vector3(xstrafe, 0, zstrafe);
+
+        Vector3 Here = transform.position;
+        Here.y += 1;
+
+        if (walkspeed > 0)
+        {
+            Debug.DrawRay(Here, transform.forward, Color.blue);
+            if (!Physics.Raycast(Here, transform.forward, walkspeed))
+                transform.Translate(Walk);
+        }
+        else if (walkspeed < 0)
+        {
+            Debug.DrawRay(Here, -transform.forward, Color.blue);
+            if (!Physics.Raycast(Here, -transform.forward, -walkspeed))
+                transform.Translate(Walk);
+        }
+
+        if (strafespeed > 0)
+        {
+            Debug.DrawRay(Here, transform.right, Color.red);
+            if (!Physics.Raycast(Here, transform.right, strafespeed))
+                transform.Translate(Strafe);
+        }
+        else if (strafespeed < 0)
+        {
+            Debug.DrawRay(Here, -transform.right, Color.red);
+            if (!Physics.Raycast(Here, -transform.right, -strafespeed))
+                transform.Translate(Strafe);
+        }
+
+        float TurnCamera = Input.GetAxis("MouseH");
+        if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
+
+        if (TurnCamera != 0)
+            transform.Rotate(0, TurnCamera, 0);
+
+        falldelay--;
+        if (falldelay <= 0) falldelay = 0;
+    }
+
+    private void HandleAnimation()
+    {
+        if (bInputRun && fInputV >= .6667f)
+        {
+            run = true;
+            walk = false;
+        }
+        else if (fInputV != 0 || fInputH != 0)
+        {
+            run = false;
+            walk = true;
+        }
+        else
+        {
+            run = false;
+            walk = false;
+        }
+        anim.SetBool("Walk", walk);
+        anim.SetBool("Run", run);
     }
 
     private float CalculateDistance(GameObject DistanceTo)

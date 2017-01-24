@@ -6,6 +6,7 @@ public class Loot : MonoBehaviour
     public int iItem = 0;
     public GameObject goLid = null;
     private int iSteps = 0;
+    public AudioClip sndOpen = null;
 
     private void FixedUpdate()
     {
@@ -44,6 +45,9 @@ public class Loot : MonoBehaviour
                 }
                 other.GetComponent<Player>().iInventory[index] = iItem;
                 iItem = 0;
+
+                if (sndOpen != null)
+                AudioSource.PlayClipAtPoint(sndOpen, transform.position);
             }
             else
                 print("Inventory is already full.");
