@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Switch : MonoBehaviour
 {
-    public GameObject[] goTarget;
+    public GameObject[] goTargets;
      private bool bSwitched = false;
     public AudioClip sndClick = null;
      private Animation aAction;
@@ -27,9 +27,9 @@ public class Switch : MonoBehaviour
 
                 bSwitched = true;
 
-                if (goTarget.Length > 0)
+                if (goTargets.Length > 0)
                 {
-                    foreach (GameObject switchable in goTarget)
+                    foreach (GameObject switchable in goTargets)
                     {
                         Vector3 pos = switchable.transform.position;
                         switchable.transform.position = new Vector3(pos.x, fHeight, pos.z);

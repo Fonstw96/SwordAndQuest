@@ -102,7 +102,7 @@ public class BossAI : MonoBehaviour
                 else if (Time.time - fLastAttack > fAttackDelay/2)
                 {
                     anim.SetTrigger("Smash");
-                    
+
                     cPlayer.LifeLoss(3);
 
                     fAttackDelay = UnityEngine.Random.Range(iMinAttackMilliseconds, iMaxAttackMilliseconds) / 100.0f;
