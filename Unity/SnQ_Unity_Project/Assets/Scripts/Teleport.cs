@@ -8,9 +8,23 @@ public class Teleport : MonoBehaviour
     public string scenedestination;
     public int startpos;
 
+<<<<<<< HEAD
 
 	void Start ()
     {
+=======
+    private GameObject player;
+
+    public Player playerscript;
+
+
+
+	void Start ()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        playerscript = player.GetComponent<Player>();
+>>>>>>> parent of f5ca85a... bye bye
     }
 
     private void OnCollisionEnter(Collision collision)

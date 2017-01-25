@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6718f32c2fadd8d4a913fd46eb9ba625
 timeCreated: 1485337106
+=======
+guid: 10fd73a7b906da44a8f56343b7e0f5c0
+timeCreated: 1484649620
+>>>>>>> parent of f5ca85a... bye bye
 licenseType: Free
 NativeFormatImporter:
   userData: 

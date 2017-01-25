@@ -7,7 +7,10 @@ public class Player : MonoBehaviour
     private Collider cEnemy;
     private Rigidbody rb;
     private Animator anim;
+<<<<<<< HEAD
     private AudioSource audio;
+=======
+>>>>>>> parent of f5ca85a... bye bye
 
     protected float angle;
     private float speed;
@@ -23,7 +26,10 @@ public class Player : MonoBehaviour
 
     public int levens = 7;
     private int attack;
+<<<<<<< HEAD
     private int attackdelay;
+=======
+>>>>>>> parent of f5ca85a... bye bye
 
     bool walk;
     bool run;
@@ -45,7 +51,10 @@ public class Player : MonoBehaviour
     public float fRegenDelay = 3;
 
     public int[] iInventory;
+<<<<<<< HEAD
     public AudioClip[] audioclip;
+=======
+>>>>>>> parent of f5ca85a... bye bye
 
     private int falldelay = 0;
 
@@ -54,7 +63,10 @@ public class Player : MonoBehaviour
         bDead = false;
         isGrounded = false;
         anim = GetComponent<Animator>();
+<<<<<<< HEAD
         audio = GetComponent<AudioSource>();
+=======
+>>>>>>> parent of f5ca85a... bye bye
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         cEnemy = goEnemy.GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
@@ -96,12 +108,20 @@ public class Player : MonoBehaviour
         {
             HandleCombat();
             //HandleMovement();
+<<<<<<< HEAD
             //float TurnCamera = Input.GetAxis("MouseH");
             //            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
             attackdelay--;
             
             //if (TurnCamera != 0)
             //    transform.Rotate(0, TurnCamera, 0);
+=======
+            float TurnCamera = Input.GetAxis("MouseH");
+            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
+
+            if (TurnCamera != 0)
+                transform.Rotate(0, TurnCamera, 0);
+>>>>>>> parent of f5ca85a... bye bye
             // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
             anim.SetBool("Walk", walk);
             anim.SetBool("Run", run);
@@ -111,8 +131,11 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Die");
             transform.GetComponent<Respawn>().RespawnPlayer();
         }
+<<<<<<< HEAD
         //if(attackdelay>0)
         Debug.Log(attackdelay);
+=======
+>>>>>>> parent of f5ca85a... bye bye
 
     }
 
@@ -243,8 +266,11 @@ public class Player : MonoBehaviour
 
     private void HandleCombat()
     {
+<<<<<<< HEAD
         
 
+=======
+>>>>>>> parent of f5ca85a... bye bye
         if (levens <= 0)
             bDead = true;
 
@@ -253,6 +279,7 @@ public class Player : MonoBehaviour
         {
             bool LMB = Input.GetMouseButtonDown(0);
             bool RMB = Input.GetMouseButtonDown(1);
+<<<<<<< HEAD
             if (attackdelay <= 0)
             {
                 if (LMB)
@@ -273,6 +300,24 @@ public class Player : MonoBehaviour
                         anim.SetTrigger("Attack1");
                         attack++;
                     }
+=======
+
+            if (LMB)
+            {
+                bAttack = true;
+
+
+            
+                if (attack >= 3)
+                {
+                    anim.SetTrigger("Attack 2");
+                    attack = 1;
+                }
+                else
+                {
+                    anim.SetTrigger("Attack1");
+                    attack++;
+>>>>>>> parent of f5ca85a... bye bye
                 }
             }
         }
@@ -295,12 +340,15 @@ public class Player : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     void PlaySound(int clip)
     {
         audio.clip = audioclip[clip];
         audio.Play();
     }
 
+=======
+>>>>>>> parent of f5ca85a... bye bye
     private float CalculateDistance(GameObject DistanceTo)
     {
         float x_dist = this.transform.position.x - DistanceTo.transform.position.x;
@@ -320,10 +368,14 @@ public class Player : MonoBehaviour
         if (levens <= 0)
             bDead = true;
         else
+<<<<<<< HEAD
         {
             anim.SetTrigger("Hit");
             PlaySound(0);
         }
+=======
+            anim.SetTrigger("Hit");
+>>>>>>> parent of f5ca85a... bye bye
 
         fLastRegen = Time.time;
     }
@@ -362,9 +414,15 @@ public class Player : MonoBehaviour
         if (startpos == 3) transform.position = new Vector3(0, 0, 5);//naar temple
         if (startpos == 4) transform.position = new Vector3(109,0.5f,102.6f);//naar overworld van temple
         if (startpos == 5) transform.position = new Vector3(95, 0.31f, 321);//naar forest
+<<<<<<< HEAD
         if (startpos == 6) transform.position = new Vector3(375,0.5f,856);//naar overworld van forest
         if (startpos == 7) transform.position = new Vector3(5, 0, 255);//naar maze
         if (startpos == 8) transform.position = new Vector3(134,0.5f,541);//naar overworld van maze
+=======
+        if (startpos == 6) transform.position = new Vector3(431.2f,0.5f,957.4f);//naar overworld van forest
+        if (startpos == 7) transform.position = new Vector3(5, 0, 255);//naar maze
+        if (startpos == 8) transform.position = new Vector3(164.9f,0.5f,863.7f);//naar overworld van maze
+>>>>>>> parent of f5ca85a... bye bye
 
 
         Debug.Log(startpos);

@@ -17,6 +17,7 @@ public class WeaponPickUp : MonoBehaviour {
 
         playerscript = player.GetComponent<Player>();
     }
+<<<<<<< HEAD
 
     void OnTriggerEnter(Collider _collider)
     {
@@ -33,5 +34,18 @@ public class WeaponPickUp : MonoBehaviour {
             }
         }
     }
+=======
+	
+    void OnTriggerEnter(Collider _collider)
+    {
+        if (_collider.gameObject.tag == "Player")
+        {
+            myWeapon.SetActive(true);
+            WeaponOnGround.SetActive(false);
+
+            playerscript.sword = true;
+        }
+        }
+>>>>>>> parent of f5ca85a... bye bye
     
 }

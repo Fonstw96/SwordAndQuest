@@ -1,0 +1,1251 @@
+fileFormatVersion: 2
+guid: 9bb95ce6845c827498ab2b3499f00116
+timeCreated: 1467386357
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Stone Golem_LOD0
+    100004: Stone Golem_Mask_LOD0
+    100006: GolemHead
+    100008: GolemHead_
+    100010: GolemHeadBone002
+    100012: GolemJaw
+    100014: GolemJaw_
+    100016: GolemLAnkle
+    100018: GolemLCalf
+    100020: GolemLCollarbone
+    100022: GolemLCollarboneBone_
+    100024: GolemLDigit11
+    100026: GolemLDigit11 1
+    100028: GolemLDigit21
+    100030: GolemLFoot
+    100032: GolemLFootBone_
+    100034: GolemLForearm
+    100036: GolemLForearm_
+    100038: GolemLLegCalf_
+    100040: GolemLLegThigh_
+    100042: GolemLThigh
+    100044: GolemLUpperarm
+    100046: GolemLUpperarm_
+    100048: GolemNeck
+    100050: GolemPelvis
+    100052: GolemPelvis_
+    100054: GolemRAnkle
+    100056: GolemRCollarbone
+    100058: GolemRCollarboneBone_
+    100060: GolemRDigit11
+    100062: GolemRDigit21
+    100064: GolemRFootBone_
+    100066: GolemRForearm
+    100068: GolemRForearm_
+    100070: GolemRibcage
+    100072: GolemRibcage_
+    100074: GolemRLegCalf
+    100076: GolemRLegCalf_
+    100078: GolemRLegDigit11
+    100080: GolemRLegFoot
+    100082: GolemRLegThigh
+    100084: GolemRLegThigh_
+    100086: GolemRUpperarm
+    100088: GolemRUpperarm_
+    100090: GolemSpikes1
+    100092: GolemSpikes2
+    100094: GolemSpikes3
+    100096: GolemSpine1
+    100098: GolemSpine2
+    100100: GolemSpine3
+    100102: GolemSpine4
+    100104: Stone Golem_LOD1
+    100106: Stone Golem_Mask_LOD1
+    400000: //RootNode
+    400002: Stone Golem_LOD0
+    400004: Stone Golem_Mask_LOD0
+    400006: GolemHead
+    400008: GolemHead_
+    400010: GolemHeadBone002
+    400012: GolemJaw
+    400014: GolemJaw_
+    400016: GolemLAnkle
+    400018: GolemLCalf
+    400020: GolemLCollarbone
+    400022: GolemLCollarboneBone_
+    400024: GolemLDigit11
+    400026: GolemLDigit11 1
+    400028: GolemLDigit21
+    400030: GolemLFoot
+    400032: GolemLFootBone_
+    400034: GolemLForearm
+    400036: GolemLForearm_
+    400038: GolemLLegCalf_
+    400040: GolemLLegThigh_
+    400042: GolemLThigh
+    400044: GolemLUpperarm
+    400046: GolemLUpperarm_
+    400048: GolemNeck
+    400050: GolemPelvis
+    400052: GolemPelvis_
+    400054: GolemRAnkle
+    400056: GolemRCollarbone
+    400058: GolemRCollarboneBone_
+    400060: GolemRDigit11
+    400062: GolemRDigit21
+    400064: GolemRFootBone_
+    400066: GolemRForearm
+    400068: GolemRForearm_
+    400070: GolemRibcage
+    400072: GolemRibcage_
+    400074: GolemRLegCalf
+    400076: GolemRLegCalf_
+    400078: GolemRLegDigit11
+    400080: GolemRLegFoot
+    400082: GolemRLegThigh
+    400084: GolemRLegThigh_
+    400086: GolemRUpperarm
+    400088: GolemRUpperarm_
+    400090: GolemSpikes1
+    400092: GolemSpikes2
+    400094: GolemSpikes3
+    400096: GolemSpine1
+    400098: GolemSpine2
+    400100: GolemSpine3
+    400102: GolemSpine4
+    400104: Stone Golem_LOD1
+    400106: Stone Golem_Mask_LOD1
+    2300000: Stone Golem_LOD0
+    2300002: Stone Golem_Mask_LOD0
+    2300004: Stone Golem_Mask_LOD1
+    3300000: Stone Golem_LOD0
+    3300002: Stone Golem_Mask_LOD0
+    3300004: Stone Golem_Mask_LOD1
+    4300000: Stone Golem_LOD0
+    4300002: Stone Golem_Mask_LOD0
+    4300004: Stone Golem_LOD1
+    4300006: Stone Golem_Mask_LOD1
+    7400000: idle
+    7400002: idle break
+    7400004: hit
+    7400006: attack1
+    7400008: attack2
+    7400010: death
+    7400012: walk
+    7400014: spawn
+    9500000: //RootNode
+    13700000: Stone Golem_LOD0
+    13700002: Stone Golem_LOD1
+    20500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle break
+      takeName: Take 001
+      firstFrame: 150
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit
+      takeName: Take 001
+      firstFrame: 200
+      lastFrame: 230
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack1
+      takeName: Take 001
+      firstFrame: 230
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack2
+      takeName: Take 001
+      firstFrame: 300
+      lastFrame: 390
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 400
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 500
+      lastFrame: 540
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: spawn
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GolemPelvis
+        weight: 1
+      - path: GolemPelvis/GolemLThigh
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLDigit11
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLFoot/GolemLFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLCalf/GolemLLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemLThigh/GolemLLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemPelvis_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegCalf_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRFootBone_
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegCalf/GolemRLegFoot/GolemRLegDigit11
+        weight: 1
+      - path: GolemPelvis/GolemRLegThigh/GolemRLegThigh_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpikes1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes2
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpikes3
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit11
+          1
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLAnkle/GolemLDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLForearm/GolemLForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemLCollarbone/GolemLUpperarm/GolemLUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHead_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemHeadBone002
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemNeck/GolemHead/GolemJaw/GolemJaw_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRCollarboneBone_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit11
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRAnkle/GolemRDigit21
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRForearm/GolemRForearm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRCollarbone/GolemRUpperarm/GolemRUpperarm_
+        weight: 1
+      - path: GolemPelvis/GolemSpine1/GolemSpine2/GolemSpine3/GolemSpine4/GolemRibcage/GolemRibcage_
+        weight: 1
+      - path: Stone Golem_LOD0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -46,11 +46,14 @@ public class BehaviourNpc : MonoBehaviour {
             {
                 currentNode++;
             }
+<<<<<<< HEAD
 
             if (currentNode == nodes.Count)
         {
             currentNode = 0;
         }
+=======
+>>>>>>> parent of f5ca85a... bye bye
     }
 
 
@@ -58,7 +61,10 @@ public class BehaviourNpc : MonoBehaviour {
 	    if (isWalking)
         {
             anim.SetBool("walk", true);
+<<<<<<< HEAD
             MoveTowards();
+=======
+>>>>>>> parent of f5ca85a... bye bye
         } else if (!isWalking)
         {
             anim.SetBool("walk", false);
