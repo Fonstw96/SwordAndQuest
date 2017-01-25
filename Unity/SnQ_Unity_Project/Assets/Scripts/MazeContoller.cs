@@ -33,8 +33,11 @@ public class MazeContoller : MonoBehaviour
             
             iRooms = goPieces.Count;
         }
+<<<<<<< HEAD
         
         for (int r = 0; r < 9; r++)
             PlayerPrefs.SetInt("Inventory" + r, 0);
+=======
+>>>>>>> master
     }
 }

@@ -12,9 +12,16 @@ public class EnemyAI : MonoBehaviour
      private float fLastAttack;
      private float fAttackDelay = 0.75f;
      private int iAttackSequence = -1;
+<<<<<<< HEAD
     public int iMinAttackMilliseconds = 200;
     public int iMaxAttackMilliseconds = 300;
     
+=======
+    public int iMinAttackMilliseconds = 100;
+    public int iMaxAttackMilliseconds = 250;
+    
+    public bool isdead = false;
+>>>>>>> master
     public bool dummy = false;
      private Animator anim;
     public float fRunSpeed = 0.15f;

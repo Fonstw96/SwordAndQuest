@@ -38,10 +38,26 @@ function Update () {
 			var relative : Vector3;
 			relative = transform.TransformDirection(0,0,1);
 			controller.Move(relative * Time.deltaTime * speed / 1.5);
+<<<<<<< HEAD
 			//controller.Move(forward * 2);
 		}
 	}
 }
+=======
+		}
+	}
+}
+function OnTriggerEnter(hit : Collider) {
+	if(hit.transform.tag == "LoadNewScene") {
+		hit.transform.GetComponent(LoadNewScene).DisplayScene();
+	}
+}
+function OnTriggerExit(hit : Collider) {
+	if(hit.transform.tag == "LoadNewScene") {
+		hit.transform.GetComponent(LoadNewScene).HideScene();
+	}
+}
+>>>>>>> master
 function OnControllerColliderHit (hit : ControllerColliderHit) {
 	if(hit.transform.GetComponent.<Rigidbody>()) {
 		hit.transform.GetComponent.<Rigidbody>().AddForce(10 * transform.forward);
