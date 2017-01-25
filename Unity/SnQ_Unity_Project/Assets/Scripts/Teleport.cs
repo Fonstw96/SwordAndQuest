@@ -8,17 +8,9 @@ public class Teleport : MonoBehaviour
     public string scenedestination;
     public int startpos;
 
-    private GameObject player;
-
-    public Player playerscript;
-
-
 
 	void Start ()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-
-        playerscript = player.GetComponent<Player>();
     }
 
     private void OnCollisionEnter(Collision collision)

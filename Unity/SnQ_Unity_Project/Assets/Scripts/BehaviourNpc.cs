@@ -46,6 +46,11 @@ public class BehaviourNpc : MonoBehaviour {
             {
                 currentNode++;
             }
+
+            if (currentNode == nodes.Count)
+        {
+            currentNode = 0;
+        }
     }
 
 
@@ -53,6 +58,7 @@ public class BehaviourNpc : MonoBehaviour {
 	    if (isWalking)
         {
             anim.SetBool("walk", true);
+            MoveTowards();
         } else if (!isWalking)
         {
             anim.SetBool("walk", false);

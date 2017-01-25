@@ -5,11 +5,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-            PlayerPrefs.SetInt("startposision", 0);
-            PlayerPrefs.SetInt("scenedes", 0);
-
-        for (int r = 0; r < 9; r++)
-            PlayerPrefs.SetInt("Inventory" + r, 0);
+        PlayerPrefs.DeleteAll();
     }
 	
 	// Update is called once per frame

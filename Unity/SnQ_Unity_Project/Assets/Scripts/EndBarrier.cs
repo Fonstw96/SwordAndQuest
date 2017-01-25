@@ -5,30 +5,34 @@ public class EndBarrier : MonoBehaviour {
 
     private DialogueManager dialogueManager;
 
-    private GameObject player;
+    private GameObject playerscript;
 
-    public Player playerscript;
+    public Player player;
 
     public string[] dialogueLines;
 
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        playerscript = GameObject.FindGameObjectWithTag("Player");
 
-        playerscript = player.GetComponent<Player>();
+        player = player.GetComponent<Player>();
 
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     void Update()
     {
-        if (playerscript.sword == true)
+        if (player.sword == true)
         {
-
             Destroy(this.gameObject);
-           
         }
+        int Scene1Completed = PlayerPrefs.GetInt("Scene1Completed");
+        if (Scene1Completed == 1)
+        {
+            Destroy(this.gameObject);
+        }
+        
 
     }
     void OnCollisionEnter(Collision _collision)
@@ -37,7 +41,7 @@ public class EndBarrier : MonoBehaviour {
         if (_collision.gameObject.tag == "Player")
         {
             
-            if (playerscript.sword == false) { 
+            if (player.sword == false) { 
                 
 
 

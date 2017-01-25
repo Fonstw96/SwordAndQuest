@@ -17,16 +17,21 @@ public class WeaponPickUp : MonoBehaviour {
 
         playerscript = player.GetComponent<Player>();
     }
-	
+
     void OnTriggerEnter(Collider _collider)
     {
-        if (_collider.gameObject.tag == "Player")
+        int Scene1Completed = PlayerPrefs.GetInt("Scene1Completed");
+        if (Scene1Completed == 0)
         {
-            myWeapon.SetActive(true);
-            WeaponOnGround.SetActive(false);
 
-            playerscript.sword = true;
+            if (_collider.gameObject.tag == "Player")
+            {
+                myWeapon.SetActive(true);
+                WeaponOnGround.SetActive(false);
+
+                playerscript.sword = true;
+            }
         }
-        }
+    }
     
 }

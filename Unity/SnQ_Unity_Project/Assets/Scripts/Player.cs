@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     private Collider cEnemy;
     private Rigidbody rb;
     private Animator anim;
+    private AudioSource audio;
 
     protected float angle;
     private float speed;
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
     public float fRegenDelay = 3;
 
     public int[] iInventory;
+    public AudioClip[] audioclip;
 
     private int falldelay = 0;
 
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour
         bDead = false;
         isGrounded = false;
         anim = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
         goEnemy = GameObject.FindGameObjectWithTag("Enemy");
         cEnemy = goEnemy.GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
@@ -92,11 +95,11 @@ public class Player : MonoBehaviour
         {
             HandleCombat();
             //HandleMovement();
-            float TurnCamera = Input.GetAxis("MouseH");
-            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
+            //float TurnCamera = Input.GetAxis("MouseH");
+//            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
 
-            if (TurnCamera != 0)
-                transform.Rotate(0, TurnCamera, 0);
+            //if (TurnCamera != 0)
+            //    transform.Rotate(0, TurnCamera, 0);
             // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
             anim.SetBool("Walk", walk);
             anim.SetBool("Run", run);
@@ -282,6 +285,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    void PlaySound(int clip)
+    {
+        audio.clip = audioclip[clip];
+        audio.Play();
+    }
+
     private float CalculateDistance(GameObject DistanceTo)
     {
         float x_dist = this.transform.position.x - DistanceTo.transform.position.x;
@@ -340,9 +349,9 @@ public class Player : MonoBehaviour
         if (startpos == 3) transform.position = new Vector3(0, 0, 5);//naar temple
         if (startpos == 4) transform.position = new Vector3(109,0.5f,102.6f);//naar overworld van temple
         if (startpos == 5) transform.position = new Vector3(95, 0.31f, 321);//naar forest
-        if (startpos == 6) transform.position = new Vector3(431.2f,0.5f,957.4f);//naar overworld van forest
+        if (startpos == 6) transform.position = new Vector3(375,0.5f,856);//naar overworld van forest
         if (startpos == 7) transform.position = new Vector3(5, 0, 255);//naar maze
-        if (startpos == 8) transform.position = new Vector3(164.9f,0.5f,863.7f);//naar overworld van maze
+        if (startpos == 8) transform.position = new Vector3(134,0.5f,541);//naar overworld van maze
 
 
         Debug.Log(startpos);
