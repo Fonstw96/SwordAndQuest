@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     public int levens = 7;
     private int attack;
+    private int attackdelay;
 
     bool walk;
     bool run;
@@ -96,8 +97,9 @@ public class Player : MonoBehaviour
             HandleCombat();
             //HandleMovement();
             //float TurnCamera = Input.GetAxis("MouseH");
-//            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
-
+            //            if (TurnCamera == 0) TurnCamera = Input.GetAxis("RightH") * 4;
+            attackdelay--;
+            
             //if (TurnCamera != 0)
             //    transform.Rotate(0, TurnCamera, 0);
             // Dit moet na de input worden ingesteld en alleen wanneer het toch al zichtbaar is, niet tijdens A en D!!
@@ -109,6 +111,8 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Die");
             transform.GetComponent<Respawn>().RespawnPlayer();
         }
+        //if(attackdelay>0)
+        Debug.Log(attackdelay);
 
     }
 
@@ -239,6 +243,8 @@ public class Player : MonoBehaviour
 
     private void HandleCombat()
     {
+        
+
         if (levens <= 0)
             bDead = true;
 
@@ -247,22 +253,26 @@ public class Player : MonoBehaviour
         {
             bool LMB = Input.GetMouseButtonDown(0);
             bool RMB = Input.GetMouseButtonDown(1);
-
-            if (LMB)
+            if (attackdelay <= 0)
             {
-                bAttack = true;
+                if (LMB)
+                {
+                    bAttack = true;
+                    PlaySound(1);
+                    attackdelay = 60;
+                    Debug.Log(attackdelay);
 
 
-            
-                if (attack >= 3)
-                {
-                    anim.SetTrigger("Attack 2");
-                    attack = 1;
-                }
-                else
-                {
-                    anim.SetTrigger("Attack1");
-                    attack++;
+                    if (attack >= 3)
+                    {
+                        anim.SetTrigger("Attack 2");
+                        attack = 1;
+                    }
+                    else
+                    {
+                        anim.SetTrigger("Attack1");
+                        attack++;
+                    }
                 }
             }
         }
@@ -310,7 +320,10 @@ public class Player : MonoBehaviour
         if (levens <= 0)
             bDead = true;
         else
+        {
             anim.SetTrigger("Hit");
+            PlaySound(0);
+        }
 
         fLastRegen = Time.time;
     }
